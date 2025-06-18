@@ -1,0 +1,64 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px; /* MODIFIED: Reduced from 20px to give the table more room */
+}
+
+#table-container {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    max-width: 95%; /* ADDED: Prevents the table from stretching uncomfortably wide on large screens */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 6px 8px; /* MODIFIED: Greatly reduced padding from 12px 15px */
+    text-align: left;
+    font-size: 14px; /* ADDED: Reduced font size for more compact text */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 15px; /* ADDED: Slightly larger font for headers */
+}
+
+/* Style the year column differently */
+tbody td:first-child {
+    font-weight: bold;
+    background-color: #f9f9f9;
+}
+
+/* Any cell that is not the first in a row (i.e., not a year cell) gets a pointer cursor */
+tbody td:not(:first-child) {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* The class that will be toggled on click */
+.highlighted {
+    background-color: #90ee90; /* LightGreen */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
