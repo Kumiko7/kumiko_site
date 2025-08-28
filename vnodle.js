@@ -239,12 +239,23 @@ document.addEventListener('DOMContentLoaded', () => {
         winVnTitleEl.textContent = dailyVn.title;
         guessCountEl.textContent = guessHistory.length;
         
-        let shareContent = `VNDB-le ${jstDateString} - ${guessHistory.length} Guesses\n\n`;
+        let shareContent = `VNDB-le ${jstDateString} - ${guessHistory.length} Guesses | https://kumiko7.github.io/kumiko_site/vnodle.html\n\n`;
         guessHistory.forEach((guess, index) => {
+			let line = `Guess ${index + 1}: `;
+            
+            // Add the release date arrow at the start of the line
+            switch (guess.releaseComparison) {
+                case 'newer': line += '⬆️'; break;
+                case 'older': line += '⬇️'; break;
+                case 'same':  line += '✅'; break;
+                default:      line += '❔'; break;
+            }
             const green = guess.tags.filter(t => t.status === 'correct').length;
             const yellow = guess.tags.filter(t => t.status === 'partial').length;
             const red = guess.tags.filter(t => t.status === 'incorrect').length;
-            shareContent += `Guess ${index + 1}: ${'🟩'.repeat(green)}${'🟨'.repeat(yellow)}${'🟥'.repeat(red)}\n`;
+            line += `${'🟩'.repeat(green)}${'🟨'.repeat(yellow)}${'🟥'.repeat(red)}\n`;
+            
+            shareContent += line;
         });
         document.getElementById('share-text').value = shareContent.trim();
     }

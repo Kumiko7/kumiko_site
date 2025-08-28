@@ -120,14 +120,12 @@ h1 {
     margin: 0 0 10px;
 }
 
-/* NEW: Flex container for date + tags */
 .guess-content-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 15px;
 }
 
-/* NEW: Styles for the date indicator */
 .release-date-indicator {
     flex-shrink: 0;
     width: 110px;
@@ -157,7 +155,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    flex-grow: 1; /* Allows tags to fill remaining space */
+    flex-grow: 1;
     transition: max-height 0.4s ease-in-out;
 }
 
@@ -216,6 +214,7 @@ h1 {
 #share-button:hover {
     opacity: 0.9;
 }
+
 #share-text {
     width: 100%;
     box-sizing: border-box;
@@ -224,4 +223,6 @@ h1 {
     border: 1px solid var(--border-color);
     padding: 10px;
     resize: none;
+    /* CHANGED: Added a fixed height to make the box taller */
+    height: 340px; 
 }
