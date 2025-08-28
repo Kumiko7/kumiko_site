@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNDB-le</title>
+    <link rel="stylesheet" href="vnodle.css">
+    <script src="vnodle.js" defer></script>
+</head>
+<body>
+    <div id="game-container">
+        <header>
+            <h1>VNDB-le</h1>
+            <p>Guess the daily Visual Novel!</p>
+        </header>
+
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Preparing the daily VN...</p>
+        </div>
+
+        <main id="game-area" class="hidden">
+            <div id="input-container">
+                <input type="text" id="vn-input" placeholder="Enter a VN title..." autocomplete="off">
+                <ul id="search-results"></ul>
+            </div>
+
+            <div id="guesses-container">
+                <!-- Guesses will be dynamically added here -->
+            </div>
+        </main>
+
+        <div id="win-screen" class="hidden">
+            <h2>Congratulations!</h2>
+            <p>You guessed the VN: <strong id="win-vn-title"></strong></p>
+            <p>It took you <strong id="guess-count"></strong> guesses.</p>
+            <button id="share-button">Share Results</button>
+            <textarea id="share-text" readonly></textarea>
+        </div>
+    </div>
+</body>
+</html>
