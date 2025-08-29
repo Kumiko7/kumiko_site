@@ -33,12 +33,11 @@ header {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
     margin-bottom: 20px;
-    /* NEW: Use flexbox to align title and hint button */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0 15px; /* Add gap between title and hint button */
+    gap: 0 15px; 
 }
 
 header h1 {
@@ -46,14 +45,12 @@ header h1 {
     margin: 0;
 }
 
-/* NEW: Make the paragraph span the full width below the title/hint */
 header p {
     width: 100%;
     margin-top: 5px;
     margin-bottom: 0;
 }
 
-/* NEW: Styles for the hint button */
 .hint-button {
     display: inline-block;
     padding: 6px 12px;
@@ -155,19 +152,23 @@ header p {
 
 .guess-content-wrapper {
     display: flex;
-    align-items: flex-start;
-    gap: 15px;
+    align-items: stretch; /* CHANGED: Make items stretch to the same height */
+    gap: 10px; /* CHANGED: Slightly reduced gap */
 }
 
 .release-date-indicator {
     flex-shrink: 0;
-    width: 110px;
+    width: 90px; /* CHANGED: Reduced width to better fit just the year */
     padding: 10px;
     background-color: var(--bg-color);
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
     font-size: 1.1em;
+    /* NEW: Flex properties to center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .release-date-indicator .arrow {
@@ -177,12 +178,42 @@ header p {
 }
 
 .release-date-indicator .date {
-    font-size: 0.85em;
+    font-size: 1em; /* CHANGED: Made year slightly larger */
     font-weight: normal;
     color: var(--secondary-text);
     margin-top: 5px;
     display: block;
 }
+
+/* --- NEW: Styles for the Developer Indicator --- */
+.developer-indicator {
+    flex-shrink: 0;
+    width: 150px; /* Set a fixed width */
+    padding: 10px;
+    background-color: var(--bg-color); /* Default/unknown state color */
+    color: var(--secondary-text);
+    border-radius: 5px;
+    font-weight: bold;
+    /* NEW: Center content and handle long names */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.developer-indicator.correct {
+    background-color: var(--correct-color);
+    color: #fff; /* White text for better contrast */
+}
+
+.developer-indicator.incorrect {
+    background-color: var(--incorrect-color);
+    color: #fff; /* White text for better contrast */
+}
+/* --- END: New Styles --- */
 
 .tags-list {
     display: flex;
@@ -256,6 +287,5 @@ header p {
     border: 1px solid var(--border-color);
     padding: 10px;
     resize: none;
-    /* CHANGED: Added a fixed height to make the box taller */
     height: 340px; 
 }

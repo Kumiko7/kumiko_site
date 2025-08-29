@@ -20,7 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let jstDateString = '';
 
     // --- Main Game Logic ---
-    
+
+    // Simplified this function to take only one URL
     async function vndbRequest(body) {
         try {
             const response = await fetch(API_URL, {
@@ -36,6 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return null;
         }
     }
+
+    // REMOVED the complex getEarliestDeveloper function entirely.
 
     async function init() {
         const startDate = new Date('2025-08-29T00:00:00Z');
@@ -57,18 +60,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const listIndex = daysPassed % vnList.length;
             const dailyVnId = vnList[listIndex];
             
-            // ADDED `released` to fields
+            // MODIFIED: Added `developers{id, name}` to the fields to fetch them directly.
             const vnResponse = await vndbRequest({
                 filters: ["id", "=", dailyVnId],
-                fields: "id, title, released, tags{id, rating, name}",
+                fields: "id, title, released, developers{id, name}, tags{id, rating, name}",
             });
 
             if (!vnResponse || vnResponse.results.length === 0) throw new Error(`Could not find VN with ID '${dailyVnId}'`);
 
             dailyVn = vnResponse.results[0];
+            
+            // NEW: Get the primary developer from the fetched `developers` array.
+            // We take the first one listed as the primary one for the game.
+            dailyVn.developer = dailyVn.developers && dailyVn.developers.length > 0 ? dailyVn.developers[0] : null;
+
             dailyVn.tags.forEach(tag => dailyVnTagMap.set(tag.id, tag));
             
             console.log(`Daily VN for ${jstDateString} (JST) is: ${dailyVn.title}`);
+            console.log(`Daily VN Developer:`, dailyVn.developer);
 
             loadingEl.classList.add('hidden');
             gameAreaEl.classList.remove('hidden');
@@ -106,10 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
         inputEl.value = '';
         searchResultsEl.innerHTML = '';
         
-        // ADDED `released` to fields
+        // MODIFIED: Added `developers{id, name}` to the fields.
         const guessDataResponse = await vndbRequest({
             filters: ["id", "=", vnId],
-            fields: "id, title, released, tags{id, rating, name}",
+            fields: "id, title, released, developers{id, name}, tags{id, rating, name}",
         });
 
         if (!guessDataResponse || guessDataResponse.results.length === 0) {
@@ -118,6 +127,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const guessedVn = guessDataResponse.results[0];
+        
+        // NEW: Get the primary developer from the fetched `developers` array.
+        guessedVn.developer = guessedVn.developers && guessedVn.developers.length > 0 ? guessedVn.developers[0] : null;
+
         const comparisonResult = compareVns(guessedVn);
         guessHistory.push(comparisonResult);
         renderGuess(comparisonResult);
@@ -129,20 +142,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function compareVns(guessedVn) {
-        // ADDED release date comparison logic
+        // Year comparison logic (unchanged)
         let releaseComparison = 'unknown';
-        if (dailyVn.released && guessedVn.released) {
-            if (dailyVn.released > guessedVn.released) releaseComparison = 'newer';
-            else if (dailyVn.released < guessedVn.released) releaseComparison = 'older';
+        const dailyVnYear = dailyVn.released ? parseInt(dailyVn.released.substring(0, 4), 10) : null;
+        const guessedVnYear = guessedVn.released ? parseInt(guessedVn.released.substring(0, 4), 10) : null;
+
+        if (dailyVnYear && guessedVnYear) {
+            if (dailyVnYear > guessedVnYear) releaseComparison = 'newer';
+            else if (dailyVnYear < guessedVnYear) releaseComparison = 'older';
             else releaseComparison = 'same';
+        }
+
+        // Developer comparison logic (unchanged, but now receives more reliable data)
+        let developerComparison = 'unknown';
+        if (dailyVn.developer && guessedVn.developer) {
+            developerComparison = dailyVn.developer.id === guessedVn.developer.id ? 'correct' : 'incorrect';
+        } else if (dailyVn.developer || guessedVn.developer) {
+            developerComparison = 'incorrect';
         }
 
         const result = { 
             id: guessedVn.id, 
             title: guessedVn.title, 
             tags: [],
-            releaseDate: guessedVn.released, // Store the date for display
-            releaseComparison: releaseComparison // Store the comparison result
+            releaseDate: guessedVn.released,
+            releaseComparison: releaseComparison,
+            developer: guessedVn.developer,
+            developerComparison: developerComparison
         };
 
         if (!guessedVn.tags) return result;
@@ -173,42 +199,47 @@ document.addEventListener('DOMContentLoaded', () => {
         titleEl.textContent = `${guessHistory.length}. ${result.title}`;
         guessRow.appendChild(titleEl);
 
-        // --- NEW: Create date indicator and wrapper ---
         const contentWrapper = document.createElement('div');
         contentWrapper.className = 'guess-content-wrapper';
 
+        // Release Year Indicator
         const dateIndicator = document.createElement('div');
         dateIndicator.className = 'release-date-indicator';
-
         const arrowSpan = document.createElement('span');
         arrowSpan.className = 'arrow';
-        
         const dateSpan = document.createElement('span');
         dateSpan.className = 'date';
-        dateSpan.textContent = result.releaseDate || 'Unknown';
+        dateSpan.textContent = result.releaseDate ? result.releaseDate.substring(0, 4) : 'Unknown';
 
         switch (result.releaseComparison) {
             case 'newer':
                 arrowSpan.textContent = '⬆️';
-                dateIndicator.title = 'The daily VN was released AFTER this one.';
+                dateIndicator.title = 'The daily VN was released in a LATER year.';
                 break;
             case 'older':
                 arrowSpan.textContent = '⬇️';
-                dateIndicator.title = 'The daily VN was released BEFORE this one.';
+                dateIndicator.title = 'The daily VN was released in an EARLIER year.';
                 break;
             case 'same':
                 arrowSpan.textContent = '✅';
-                dateIndicator.title = 'Released on the same date as the daily VN.';
+                dateIndicator.title = 'Released in the same year as the daily VN.';
                 break;
             default: // unknown
                 arrowSpan.textContent = '❔';
-                dateIndicator.title = 'Release date could not be compared.';
+                dateIndicator.title = 'Release year could not be compared.';
                 break;
         }
 
         dateIndicator.appendChild(arrowSpan);
         dateIndicator.appendChild(dateSpan);
-        contentWrapper.appendChild(dateIndicator); // Add date indicator to wrapper
+        contentWrapper.appendChild(dateIndicator);
+
+        // Developer Indicator (this part is now fed with correct data)
+        const developerIndicator = document.createElement('div');
+        developerIndicator.className = `developer-indicator ${result.developerComparison}`;
+        developerIndicator.textContent = result.developer ? result.developer.name : 'Developer Unknown';
+        developerIndicator.title = `Developer: ${result.developer ? result.developer.name : 'Unknown'}`;
+        contentWrapper.appendChild(developerIndicator);
 
         const tagsList = document.createElement('div');
         tagsList.className = 'tags-list';
@@ -223,8 +254,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tagsList.textContent = 'No tags to display for this entry.';
         }
         
-        contentWrapper.appendChild(tagsList); // Add tag list to wrapper
-        guessRow.appendChild(contentWrapper); // Add wrapper to the main row
+        contentWrapper.appendChild(tagsList);
+        guessRow.appendChild(contentWrapper);
 
         if (result.tags.length > TAG_COLLAPSE_THRESHOLD) {
             guessRow.classList.add('collapsible');
@@ -245,13 +276,21 @@ document.addEventListener('DOMContentLoaded', () => {
         guessHistory.forEach((guess, index) => {
 			let line = `Guess ${index + 1}: `;
             
-            // Add the release date arrow at the start of the line
             switch (guess.releaseComparison) {
                 case 'newer': line += '⬆️'; break;
                 case 'older': line += '⬇️'; break;
                 case 'same':  line += '✅'; break;
                 default:      line += '❔'; break;
             }
+
+            let devMarker = '⚪';
+            if (guess.developerComparison === 'correct') {
+                devMarker = '🟢';
+            } else if (guess.developerComparison === 'incorrect') {
+                devMarker = '🔴';
+            }
+            line += ` ${devMarker} `;
+
             const green = guess.tags.filter(t => t.status === 'correct').length;
             const yellow = guess.tags.filter(t => t.status === 'partial').length;
             const red = guess.tags.filter(t => t.status === 'incorrect').length;
