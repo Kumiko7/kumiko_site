@@ -33,12 +33,45 @@ header {
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 10px;
     margin-bottom: 20px;
+    /* NEW: Use flexbox to align title and hint button */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0 15px; /* Add gap between title and hint button */
 }
 
-h1 {
+header h1 {
     color: var(--accent-color);
     margin: 0;
 }
+
+/* NEW: Make the paragraph span the full width below the title/hint */
+header p {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* NEW: Styles for the hint button */
+.hint-button {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--secondary-text);
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.hint-button:hover {
+    background-color: var(--border-color);
+    color: var(--primary-text);
+}
+
 
 .hidden {
     display: none !important;
