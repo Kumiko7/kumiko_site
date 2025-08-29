@@ -174,14 +174,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!guessedVn.tags) return result;
 
         guessedVn.tags.forEach(guessedTag => {
-            let status = 'incorrect';
-            if (dailyVnTagMap.has(guessedTag.id)) {
-                const dailyTag = dailyVnTagMap.get(guessedTag.id);
-				if (dailyTag.rating > 0.5) {
-					status = Math.abs(dailyTag.rating - guessedTag.rating) > 1 ? 'partial' : 'correct';
+			if (guessedTag.rating > 0.5) {
+				let status = 'incorrect';
+				if (dailyVnTagMap.has(guessedTag.id)) {
+					const dailyTag = dailyVnTagMap.get(guessedTag.id);
+					if (dailyTag.rating > 0.5) {
+						status = Math.abs(dailyTag.rating - guessedTag.rating) > 1 ? 'partial' : 'correct';
+					}
 				}
-            }
-            result.tags.push({ name: guessedTag.name, status });
+				result.tags.push({ name: guessedTag.name, status });
+			}
         });
 
         const sortOrder = { correct: 0, partial: 1, incorrect: 2 };
@@ -294,8 +296,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const green = guess.tags.filter(t => t.status === 'correct').length;
             const yellow = guess.tags.filter(t => t.status === 'partial').length;
             const red = guess.tags.filter(t => t.status === 'incorrect').length;
-            line += `${'🟩'.repeat(green)}${'🟨'.repeat(yellow)}${'🟥'.repeat(red)}\n`;
-            
+			line += `🟩${green} 🟨${yellow} 🟥${red}\n`;       
+			
             shareContent += line;
         });
         document.getElementById('share-text').value = shareContent.trim();
