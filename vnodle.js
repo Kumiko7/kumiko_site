@@ -151,7 +151,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let status = 'incorrect';
             if (dailyVnTagMap.has(guessedTag.id)) {
                 const dailyTag = dailyVnTagMap.get(guessedTag.id);
-                status = Math.abs(dailyTag.rating - guessedTag.rating) > 1 ? 'partial' : 'correct';
+				if (dailyTag > 0.5) {
+					status = Math.abs(dailyTag.rating - guessedTag.rating) > 1 ? 'partial' : 'correct';
+				}
             }
             result.tags.push({ name: guessedTag.name, status });
         });
