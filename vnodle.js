@@ -174,17 +174,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!guessedVn.tags) return result;
 
         guessedVn.tags.forEach(guessedTag => {
-			if (guessedTag.rating > 0.5) {
+			if (guessedTag.rating > 0.0) {
 				let status = 'incorrect';
 				let dailyRating = 0;
 				if (dailyVnTagMap.has(guessedTag.id)) {
 					const dailyTag = dailyVnTagMap.get(guessedTag.id);
 					dailyRating = dailyTag.rating
-					if (dailyRating > 0.5) {
+					if (dailyRating > 0.0) {
 						status = dailyRating < 2.0 ? 'partial' : 'correct';
 					}
 				}
-				result.tags.push({ name: guessedTag.name, status, rating: dailyRating });
+				result.tags.push({ name: guessedTag.name, status, rating: dailyRating, guessRating: guessedTag.rating});
 			}
         });
 
@@ -195,7 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 return statusDifference; // Primary sort by status
             }
             // If status is the same, secondary sort by rating (descending)
-            return b.rating - a.rating;
+			if (b.rating - a.rating !== 0 && sortOrder[a.status] !== 2) {
+				return b.rating - a.rating;
+			}
+            return b.guessRating - a.guessRating;
         });
         return result;
     }
