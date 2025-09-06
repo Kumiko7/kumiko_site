@@ -26,7 +26,7 @@ body {
     width: 100%;
     max-width: 1800px;
     padding: 20px;
-    box-sizing: border-box; /* Added for better padding behavior */
+    box-sizing: border-box;
 }
 
 header {
@@ -157,6 +157,13 @@ header p {
     gap: 10px;
 }
 
+/* NEW: Wrapper for the date and developer info */
+.info-row {
+    display: flex;
+    gap: 10px;
+    align-items: stretch;
+}
+
 .release-date-indicator {
     flex-shrink: 0;
     width: 60px;
@@ -211,7 +218,6 @@ header p {
     color: #fff;
 }
 
-
 .tags-container {
     display: flex;
     flex-direction: row;
@@ -220,7 +226,6 @@ header p {
     transition: max-height 0.4s ease-in-out;
     min-width: 0;
 }
-
 
 .tags-column {
     flex: 1;
@@ -234,13 +239,11 @@ header p {
     cursor: pointer;
 }
 
-
 .tags-container.collapsed {
     max-height: 75px;
     overflow: hidden;
     position: relative;
 }
-
 
 .tags-container.collapsed::after {
     content: '';
@@ -287,6 +290,7 @@ header p {
     cursor: pointer;
     margin-bottom: 10px;
 }
+
 #share-button:hover {
     opacity: 0.9;
 }
@@ -303,19 +307,22 @@ header p {
 }
 
 /* --- START: MOBILE RESPONSIVE FIX --- */
-/* Apply these styles on screens 768px wide or smaller */
 @media (max-width: 768px) {
     .guess-content-wrapper {
-        flex-direction: column; /* Stack the items vertically */
+        flex-direction: column; /* Stacks .info-row and .tags-container */
     }
 
-    /* Reset fixed widths to allow elements to fill the container */
+    .info-row {
+        width: 100%; /* Ensure the row takes full width */
+    }
+
+    /* Make date and dev indicators share the space equally */
     .release-date-indicator,
     .developer-indicator {
+        flex: 1; /* This overrides the fixed widths */
         width: auto;
     }
 
-    /* Optional: On mobile, you might want both tag columns to stack as well */
     .tags-container {
         flex-direction: column;
     }

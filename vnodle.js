@@ -215,6 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const contentWrapper = document.createElement('div');
         contentWrapper.className = 'guess-content-wrapper';
+		
+		const infoRow = document.createElement('div');
+        infoRow.className = 'info-row';
 
         // Release Year Indicator
         const dateIndicator = document.createElement('div');
@@ -246,14 +249,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         dateIndicator.appendChild(arrowSpan);
         dateIndicator.appendChild(dateSpan);
-        contentWrapper.appendChild(dateIndicator);
+        infoRow.appendChild(dateIndicator);
 
         // Developer Indicator (this part is now fed with correct data)
         const developerIndicator = document.createElement('div');
         developerIndicator.className = `developer-indicator ${result.developerComparison}`;
         developerIndicator.textContent = result.developer ? result.developer.name : 'Developer Unknown';
         developerIndicator.title = `Developer: ${result.developer ? result.developer.name : 'Unknown'}`;
-        contentWrapper.appendChild(developerIndicator);
+		
+		infoRow.appendChild(developerIndicator);
+        contentWrapper.appendChild(infoRow);
 
         const tagsContainer = document.createElement('div');
         tagsContainer.className = 'tags-container'; // New class for flex/grid styling
