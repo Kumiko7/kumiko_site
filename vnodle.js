@@ -255,26 +255,44 @@ document.addEventListener('DOMContentLoaded', () => {
         developerIndicator.title = `Developer: ${result.developer ? result.developer.name : 'Unknown'}`;
         contentWrapper.appendChild(developerIndicator);
 
-        const tagsList = document.createElement('div');
-        tagsList.className = 'tags-list';
+        const tagsContainer = document.createElement('div');
+        tagsContainer.className = 'tags-container'; // New class for flex/grid styling
+
         if (result.tags.length > 0) {
+            // Left column for Correct and Partial tags
+            const leftColumn = document.createElement('div');
+            leftColumn.className = 'tags-column';
+
+            // Right column for Incorrect tags
+            const rightColumn = document.createElement('div');
+            rightColumn.className = 'tags-column';
+
             result.tags.forEach(tag => {
                 const tagEl = document.createElement('span');
                 tagEl.className = `tag tag-${tag.status}`;
                 tagEl.textContent = tag.name;
-                tagsList.appendChild(tagEl);
+
+                if (tag.status === 'correct' || tag.status === 'partial') {
+                    leftColumn.appendChild(tagEl);
+                } else { // 'incorrect'
+                    rightColumn.appendChild(tagEl);
+                }
             });
+
+            tagsContainer.appendChild(leftColumn);
+            tagsContainer.appendChild(rightColumn);
         } else {
-            tagsList.textContent = 'No tags to display for this entry.';
+            tagsContainer.textContent = 'No tags to display for this entry.';
         }
         
-        contentWrapper.appendChild(tagsList);
+        contentWrapper.appendChild(tagsContainer);
         guessRow.appendChild(contentWrapper);
 
+        // Apply collapse logic to the new parent container
         if (result.tags.length > TAG_COLLAPSE_THRESHOLD) {
             guessRow.classList.add('collapsible');
-            tagsList.classList.add('collapsed');
-            guessRow.addEventListener('click', () => tagsList.classList.toggle('collapsed'));
+            tagsContainer.classList.add('collapsed');
+            guessRow.addEventListener('click', () => tagsContainer.classList.toggle('collapsed'));
         }
         
         guessesContainerEl.appendChild(guessRow);

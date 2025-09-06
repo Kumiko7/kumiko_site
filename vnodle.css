@@ -152,20 +152,19 @@ header p {
 
 .guess-content-wrapper {
     display: flex;
-    align-items: stretch; /* CHANGED: Make items stretch to the same height */
-    gap: 10px; /* CHANGED: Slightly reduced gap */
+    align-items: stretch;
+    gap: 10px;
 }
 
 .release-date-indicator {
     flex-shrink: 0;
-    width: 90px; /* CHANGED: Reduced width to better fit just the year */
+    width: 60px;
     padding: 10px;
     background-color: var(--bg-color);
     border-radius: 5px;
     text-align: center;
     font-weight: bold;
     font-size: 1.1em;
-    /* NEW: Flex properties to center content */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,62 +177,76 @@ header p {
 }
 
 .release-date-indicator .date {
-    font-size: 1em; /* CHANGED: Made year slightly larger */
+    font-size: 1em;
     font-weight: normal;
     color: var(--secondary-text);
     margin-top: 5px;
     display: block;
 }
 
-/* --- NEW: Styles for the Developer Indicator --- */
 .developer-indicator {
     flex-shrink: 0;
-    width: 150px; /* Set a fixed width */
+    width: 100px; /* The fixed width is what will trigger the wrap */
     padding: 10px;
-    background-color: var(--bg-color); /* Default/unknown state color */
+    background-color: var(--bg-color);
     color: var(--secondary-text);
     border-radius: 5px;
     font-weight: bold;
-    /* NEW: Center content and handle long names */
+    /* Center content */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    /* MODIFICATION: Allow text to wrap */
+    white-space: normal; /* Was 'nowrap' */
+    overflow-wrap: break-word; /* Ensures long words without spaces also wrap */
+    /* REMOVED: overflow and text-overflow are for single-line truncation */
 }
 
 .developer-indicator.correct {
     background-color: var(--correct-color);
-    color: #fff; /* White text for better contrast */
+    color: #fff;
 }
 
 .developer-indicator.incorrect {
     background-color: var(--incorrect-color);
-    color: #fff; /* White text for better contrast */
+    color: #fff;
 }
-/* --- END: New Styles --- */
 
-.tags-list {
+/* --- START: NEW/MODIFIED STYLES for 2-Column Tag Layout --- */
+
+/* This is the new container for the columns */
+.tags-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    flex-grow: 1;
-    transition: max-height 0.4s ease-in-out;
+    flex-direction: row; /* Align columns side-by-side */
+    gap: 15px; /* Space between the correct/incorrect columns */
+    flex-grow: 1; /* Make the container fill the remaining horizontal space */
+    transition: max-height 0.4s ease-in-out; /* For collapse animation */
+    min-width: 0; /* Prevents content from overflowing its container */
+}
+
+/* This styles each individual column */
+.tags-column {
+    flex: 1; /* Each column takes up half the space of the container */
+    display: flex;
+    flex-wrap: wrap; /* This is the key change: allows tags to wrap */
+    gap: 8px; /* Space between tags within a column */
+    align-content: flex-start; /* Aligns wrapped lines to the top */
 }
 
 .guess-row.collapsible {
     cursor: pointer;
 }
 
-.tags-list.collapsed {
-    max-height: 75px;
+/* Selector is updated to target the new container */
+.tags-container.collapsed {
+    max-height: 75px; /* Height of the collapsed view */
     overflow: hidden;
     position: relative;
 }
 
-.tags-list.collapsed::after {
+/* Selector is updated to target the new container */
+.tags-container.collapsed::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -250,7 +263,12 @@ header p {
     font-size: 14px;
     color: #fff;
     font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+/* --- END: NEW/MODIFIED STYLES --- */
 
 .tag-correct { background-color: var(--correct-color); }
 .tag-partial { background-color: var(--partial-color); }
