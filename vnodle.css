@@ -24,8 +24,9 @@ body {
 
 #game-container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1800px;
     padding: 20px;
+    box-sizing: border-box; /* Added for better padding behavior */
 }
 
 header {
@@ -37,7 +38,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0 15px; 
+    gap: 0 15px;
 }
 
 header h1 {
@@ -186,21 +187,18 @@ header p {
 
 .developer-indicator {
     flex-shrink: 0;
-    width: 100px; /* The fixed width is what will trigger the wrap */
+    width: 100px;
     padding: 10px;
     background-color: var(--bg-color);
     color: var(--secondary-text);
     border-radius: 5px;
     font-weight: bold;
-    /* Center content */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* MODIFICATION: Allow text to wrap */
-    white-space: normal; /* Was 'nowrap' */
-    overflow-wrap: break-word; /* Ensures long words without spaces also wrap */
-    /* REMOVED: overflow and text-overflow are for single-line truncation */
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 
 .developer-indicator.correct {
@@ -213,39 +211,37 @@ header p {
     color: #fff;
 }
 
-/* --- START: NEW/MODIFIED STYLES for 2-Column Tag Layout --- */
 
-/* This is the new container for the columns */
 .tags-container {
     display: flex;
-    flex-direction: row; /* Align columns side-by-side */
-    gap: 15px; /* Space between the correct/incorrect columns */
-    flex-grow: 1; /* Make the container fill the remaining horizontal space */
-    transition: max-height 0.4s ease-in-out; /* For collapse animation */
-    min-width: 0; /* Prevents content from overflowing its container */
+    flex-direction: row;
+    gap: 15px;
+    flex-grow: 1;
+    transition: max-height 0.4s ease-in-out;
+    min-width: 0;
 }
 
-/* This styles each individual column */
+
 .tags-column {
-    flex: 1; /* Each column takes up half the space of the container */
+    flex: 1;
     display: flex;
-    flex-wrap: wrap; /* This is the key change: allows tags to wrap */
-    gap: 8px; /* Space between tags within a column */
-    align-content: flex-start; /* Aligns wrapped lines to the top */
+    flex-wrap: wrap;
+    gap: 8px;
+    align-content: flex-start;
 }
 
 .guess-row.collapsible {
     cursor: pointer;
 }
 
-/* Selector is updated to target the new container */
+
 .tags-container.collapsed {
-    max-height: 75px; /* Height of the collapsed view */
+    max-height: 75px;
     overflow: hidden;
     position: relative;
 }
 
-/* Selector is updated to target the new container */
+
 .tags-container.collapsed::after {
     content: '';
     position: absolute;
@@ -267,8 +263,6 @@ header p {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-/* --- END: NEW/MODIFIED STYLES --- */
 
 .tag-correct { background-color: var(--correct-color); }
 .tag-partial { background-color: var(--partial-color); }
@@ -305,5 +299,25 @@ header p {
     border: 1px solid var(--border-color);
     padding: 10px;
     resize: none;
-    height: 340px; 
+    height: 340px;
 }
+
+/* --- START: MOBILE RESPONSIVE FIX --- */
+/* Apply these styles on screens 768px wide or smaller */
+@media (max-width: 768px) {
+    .guess-content-wrapper {
+        flex-direction: column; /* Stack the items vertically */
+    }
+
+    /* Reset fixed widths to allow elements to fill the container */
+    .release-date-indicator,
+    .developer-indicator {
+        width: auto;
+    }
+
+    /* Optional: On mobile, you might want both tag columns to stack as well */
+    .tags-container {
+        flex-direction: column;
+    }
+}
+/* --- END: MOBILE RESPONSIVE FIX --- */
