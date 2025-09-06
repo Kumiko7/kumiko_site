@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     function renderGuess(result) {
-        const TAG_COLLAPSE_THRESHOLD = 20;
+        const TAG_COLLAPSE_THRESHOLD = 15;
         const guessRow = document.createElement('div');
         guessRow.className = 'guess-row';
 
