@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					const dailyTag = dailyVnTagMap.get(guessedTag.id);
 					dailyRating = dailyTag.rating
 					if (dailyRating > 0.0) {
-						status = dailyRating < 2.0 ? 'partial' : 'correct';
+						status = dailyRating < 1.9 ? 'partial' : 'correct';
 					}
 				}
 				result.tags.push({ name: guessedTag.name, status, rating: dailyRating, guessRating: guessedTag.rating});
