@@ -57,26 +57,91 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step">
-    <p>To reach the final boss and trigger the end of the replay, you must collect four orbs through specific combat puzzles. <b>Note:</b> You must not exceed 30 damage in any fight.</p>
+    <p>To successfully complete this section and execute <code>renpy.end_replay()</code>, you must obtain all four element orbs. To complete the combat sequences, you must avoid taking more than 30 points of damage in any individual fight (meaning <code>senseidamage</code> must remain 30 or lower).</p>
 
-    <p><b>1. Resource Gathering:</b><br>
-    - Go to <code>Fields of Despair</code> and farm <b>Common Snails</b> (Attack -> Tackle) until you have 50 pcur.<br>
-    - Go to <code>Traveler’s Tavern</code> and buy <b>Salt Spray</b>.<br>
-    - Farm more currency until you can buy <b>Fire Ball</b> (500 pcur) at the Tavern.<br>
-    - Farm <b>Metal Dogslimes</b> (Attack -> Fire Ball) in the Fields until you have ~5,000 pcur.</p>
+    <p><b>Step 1: Resource Gathering (Currency Farming)</b><br>
+    You require premium currency (<code>pcur</code>) to purchase maps, active skills, and equipment.
+    <ul>
+        <li>Select <code>Fields of Despair</code> and farm the <b>Common Snail</b> by selecting <code>Attack</code> -> <code>Tackle</code>. Each victory awards 5 <code>pcur</code>. Repeat this until you accumulate at least <b>500 pcur</b>.</li>
+        <li>Return to the hub and enter <code>Traveler’s Tavern</code>. Buy the <code>Fire Ball</code> skill (500 pcur).</li>
+        <li>Return to the <code>Fields of Despair</code>. Farm the <b>Metal Dogslime</b> using <code>Attack</code> -> <code>Fire Ball</code>. Each victory awards 100 <code>pcur</code>. Repeat this until you have at least <b>4,900 pcur</b> (or <b>8,900 pcur</b> if you plan to unlock the optional Developer Island branch).</li>
+    </ul>
+    </p>
 
-    <p><b>2. Shopping Checklist:</b><br>
-    - <b>Tavern:</b> Buy all 4 Maps, Venom Spit, Banana Blast, Bubble Beam, Sanitize, and Fertilize.<br>
-    - <b>Merchant:</b> Buy Sword of Hope, Shield of Resistance, Boots of Forgiveness, Steel Bucket, and Massage Oil.</p>
+    <p><b>Step 2: Purchase Checklist</b><br>
+    Travel to the shops to acquire the necessary keys, skills, and gear:
+    <ul>
+        <li><b>Traveler's Tavern:</b> Purchase <code>Quest: Sea of Stairs</code> (100 pcur), <code>Quest: Bedlehem</code> (150 pcur), <code>Quest: Unholy Cathedral</code> (300 pcur), <code>Venom Spit</code> (50 pcur), <code>Banana Blast</code> (100 pcur), <code>Bubble Beam</code> (200 pcur), <code>Sanitize</code> (100 pcur), <code>Fertilize</code> (150 pcur), <code>Salt Spray</code> (50 pcur), and finally <code>Quest: Palace of the Fist</code> (250 pcur) which automatically redirects you back to the main hub.</li>
+        <li><b>Roadside Merchant:</b> Purchase <code>Sword of Hope</code> (500 pcur), <code>Shield of Resistance</code> (600 pcur), <code>Boots of Forgiveness</code> (700 pcur), <code>Steel Bucket</code> (800 pcur), and <code>Massage Oil</code> (350 pcur).</li>
+    </ul>
+    </p>
 
-    <p><b>3. Boss Encounters:</b><br>
-    - <b>Sea of Stairs (Plant Orb):</b> <code>Guard</code> -> <code>Attack: Massage Oil</code> -> <code>Attack: Fire Ball</code> -> <code>Attack: Tackle</code>.<br>
-    - <b>Bedlehem (Worm Orb):</b> <code>Attack: Venom Spit</code> -> <code>Attack: Salt Spray</code> -> <code>Attack: Bubble Beam</code> -> <code>Guard</code>.<br>
-    - <b>Palace of the Fist (Fist Orb):</b> <code>Attack: Banana Blast</code> -> <code>Guard</code> -> <code>Attack: Sanitize</code> -> <code>Attack: Tackle</code>.<br>
-    - <b>Unholy Cathedral (Red Orb):</b> <code>Attack: Massage Oil</code> -> <code>Attack: Fertilize</code> -> <code>Guard</code> -> <code>Attack: Sanitize</code>.</p>
+    <p><b>Step 3: Solve Combat Puzzles to Earn the Orbs</b><br>
+    Enter each quest zone from the main hub and input the specific choice sequence:
+    <ul>
+        <li><b>Sea of Stairs (Plant Orb):</b>
+            <ol>
+                <li>Choose <code>Guard</code> (Increases <code>netkillpts</code> to 1; 0 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Use...Massage Oil?</code> (Increases <code>netkillpts</code> to 2; 10 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Fire Ball</code> (Increases <code>netkillpts</code> to 3; 20 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Tackle</code> (Obtains <code>plantorb</code>; exits to hub)</li>
+            </ol>
+        </li>
+        <li><b>Bedlehem (Worm Orb):</b>
+            <ol>
+                <li>Choose <code>Attack</code> -> <code>Venom Spit</code> (Increases <code>mannykillpts</code> to 1; 10 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Salt Spray</code> (Increases <code>mannykillpts</code> to 2; 20 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Bubble Beam</code> (Increases <code>mannykillpts</code> to 3; 20 damage taken)</li>
+                <li>Choose <code>Guard</code> (Obtains <code>wormorb</code>; exits to hub)</li>
+            </ol>
+        </li>
+        <li><b>Palace of the Fist (Fist Orb):</b>
+            <ol>
+                <li>Choose <code>Attack</code> -> <code>Banana Blast</code> (Increases <code>karatekillpts</code> to 1; 10 damage taken)</li>
+                <li>Choose <code>Guard</code> (Increases <code>karatekillpts</code> to 2; 20 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Sanitize</code> (Increases <code>karatekillpts</code> to 3; 30 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Tackle</code> (Obtains <code>fistorb</code>; exits to hub)</li>
+            </ol>
+        </li>
+        <li><b>Unholy Cathedral (Red Orb):</b>
+            <ol>
+                <li>Choose <code>Attack</code> -> <code>Use...Massage Oil?</code> (Increases <code>twinskillpts</code> to 1; 10 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Fertilize</code> (Increases <code>twinskillpts</code> to 2; 20 damage taken)</li>
+                <li>Choose <code>Guard</code> (Increases <code>twinskillpts</code> to 3; 20 damage taken)</li>
+                <li>Choose <code>Attack</code> -> <code>Sanitize</code> (Obtains <code>redorb</code>; exits to hub)</li>
+            </ol>
+        </li>
+    </ul>
+    </p>
 
-    <p><b>4. Final Step:</b><br>
-    - Go to the <code>Main Hub</code> and select <b>Meowri’s House</b>.<br>
-    - Choose <b>"Summon the final boss"</b> to complete the event.</p>
+    <p><b>Step 4: Summon Final Boss</b><br>
+    With all four orbs in your inventory, select <code>Meowri’s House</code> from the main hub, and choose <code>"Summon the final boss"</code>. This triggers <code>renpy.end_replay()</code>.
+    </p>
+
+    <hr style="border-color: #333; margin: 20px 0;">
+
+    <p><b>Optional Branch: Developer Island</b><br>
+    There is an optional boss sequence that leads outside this file to <code>postfreddeathscene</code>:
+    <ul>
+        <li><b>Prerequisites:</b> Buy <code>Ancient Map Piece 1</code> from the Tavern (1000 pcur) and <code>Ancient Map Piece 2</code> from the Roadside Merchant (3000 pcur). Make sure <code>fredisdead</code> is False.</li>
+        <li>Go to <code>Developer Island</code> to battle Fred (Max damage limit is 100):
+            <ol>
+                <li><code>Attack</code> -> <code>Tackle</code> (killpts: 1)</li>
+                <li><code>Attack</code> -> <code>Use...Massage Oil?</code> (killpts: 2)</li>
+                <li><code>Attack</code> -> <code>Fire Ball</code> (killpts: 3)</li>
+                <li><code>Guard</code> (killpts: 4)</li>
+                <li><code>Attack</code> -> <code>Venom Spit</code> (killpts: 5)</li>
+                <li><code>Attack</code> -> <code>Sanitize</code> (killpts: 6)</li>
+                <li><code>Guard</code> (killpts: 7)</li>
+                <li><code>Attack</code> -> <code>Banana Blast</code> (killpts: 8)</li>
+                <li><code>Attack</code> -> <code>Fire Ball</code> (killpts: 9)</li>
+                <li><code>Guard</code> (killpts: 10)</li>
+                <li><code>Attack</code> -> <code>Tackle</code> (Defeats Fred and jumps to <code>postfreddeathscene</code>)</li>
+            </ol>
+        </li>
+    </ul>
+    </p>
 </div>
 <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+event:
