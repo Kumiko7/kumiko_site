@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finds himself back on the metaphysical train that transports him into the dreams of others. He reflects on the unpleasant, mechanical nature of the journey, noting that he has come to accept this routine despite his initial fears of being trapped in a nightmare.</p><p>Upon arriving, Janu enters a void-like dreamscape occupied by Mori. Mori, clearly distressed and resentful of Janu’s presence, views him as a &quot;tumor&quot; and a manifestation of her own internal turmoil. She reveals that she has been unable to have actual dreams for years, experiencing only this empty white room, which she attributes to a neurological condition.</p><p>During their conversation, Mori admits that she previously wrote songs to express her feelings but has lost her creative spark since entering high school. Janu encourages her to try dreaming again. Despite her skepticism, Mori eventually agrees, and they work together to build a foundation for her dreamscape, starting with water, a red-and-purple sky, and architectural elements like monoliths. Janu encourages her to keep building, suggesting that she will eventually find a new source of inspiration that doesn&#x27;t involve him. The event concludes with Mori acknowledging the beauty of the dreamscape they created as the scene fades.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

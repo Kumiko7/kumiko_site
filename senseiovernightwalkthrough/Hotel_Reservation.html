@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu initiates a plan to help Roni make amends for her past bullying. After a video call where Janu insists on the timing, the two meet outside a hotel where Mori, a victim of Roni&#x27;s past behavior, works. Janu coaches Roni to remain calm while he takes the lead in antagonizing Mori to create an opening for their conversation.</p><p>Once inside, Janu harasses Mori by insisting on a room reservation, making inappropriate comments, and even manhandling one of Mori’s plants to provoke a reaction. The strategy works; overwhelmed and desperate to get Janu to leave, Mori agrees to speak with Roni. Janu leaves the lobby, leaving the two women alone.</p><p>The ensuing confrontation is tense. Mori rejects Roni’s apology, stating she is insulted by the gesture and maintains that Roni is responsible for her own choices. Mori recounts the suffering Roni inflicted on others, specifically mentioning Sora and Nokana, and makes it clear that she feels no forgiveness for her former bully. The argument escalates until Roni, feeling unheard and rejected, lashes out by breaking the plant Janu had previously handled. Janu returns after Roni leaves and finds Mori crying, concluding that the attempt at closure has ended in emotional turmoil for both parties.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

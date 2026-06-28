@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Dayai and Juna are walking to school discussing the New Church of Suzuka Kowuzimi, which Janu identifies as a pyramid scheme. Upon catching up to them, Janu surprises the duo by jokingly shouting “Usagi Warrior!”—a display that Dayai finds deeply cringeworthy, contrasting Janu&#x27;s age with their own.</p><p>As they arrive at the school, Juna attempts to confess a secret to Dayai but is interrupted when she joins Janu in a synchronized, enthusiastic “Usagi Warrior!” shout. This prank leaves Dayai feeling alienated, prompting her to threaten to start walking to school alone. The trio eventually reconciles, with Dayai insisting they continue their morning routine together, while also noting that Juna and Janu often display uncanny similarities in their speech and behavior.</p><p>At the lockers, the group encounters Eruka, who is struggling with a jammed locker. When Eruka asks Janu for help, Dayai reacts with uncharacteristic coldness, appearing jealous of Eruka&#x27;s feelings for Janu. After Juna and Dayai leave to explore the library, Janu remains behind with Eruka. Eruka asks Janu about their relationship, specifically when they will become more intimate. Janu laughs, breaking his usual stoic demeanor, but is interrupted by the school bell before he can provide a concrete answer. The event concludes with Janu and Eruka failing to find a janitor to open the locker, leaving Janu to ponder Dayai’s recent hostility toward Eruka.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

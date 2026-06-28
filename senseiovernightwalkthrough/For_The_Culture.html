@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>In the preparations for the school&#x27;s Culture Festival, Zena and D’vala discuss beauty products, leading Zena to make a series of flirtatious and eccentric comments, including a bizarre question about D&#x27;vala’s physical capabilities that leaves D’vala and Roni bewildered. Roni, clearly exasperated by Zena&#x27;s behavior, tries to establish boundaries and discourages her from gossiping about other classmates. Zena introduces her &quot;daughter,&quot; a young child named Penelope, further confusing the situation.</p><p>Janu joins Nokana to discuss the upcoming festival, noting the school’s history of a mysterious gymnasium fire. Nokana suggests they investigate the fire like a detective duo, with Janu assuming the role of Sherlock Holmes and Nokana as his partner. Nearby, Sora attempts to comfort Mori, who remains visibly upset and distant from Nokana, leading Sora to humorously suggest a joint custody arrangement for herself.</p><p>Meanwhile, Kio struggles with extreme anxiety regarding her new look, which consists of a wig and a beret. Despite support from her friends Oki and Eruka, Kio remains plagued by insecurity. When the trio arrives at the classroom, Kio makes a grand, overly dramatic entrance to declare herself a &quot;new Kio.&quot; Nirima coldly shuts her down, leading to an outburst from Kio where she vents her frustrations and storms out to smoke. The event concludes with the announcement of the festival preparations officially beginning, leaving the class dynamic tense and unsettled.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu, Juna, and Anju find themselves in the spiritual realm of the mysterious train, having arrived there through meditation. They discuss the surreal nature of their situation, noting that as spirits, they cannot physically feel the train&#x27;s cold environment. Anju struggles with anxiety regarding what her return home will entail, but the trio finds a moment of camaraderie and humor to cope with the absurdity of their shared existence and biological connection.</p><p>A beacon appears, signaling that the train has arrived at a door for Anju. Before departing, Anju expresses a mix of relief and hesitation about returning to her life as a teacher, fearing the potential time dilation between worlds. Janu offers reassurance, sensing that she will be fine. After Anju leaves, Juna expresses concern about Anju becoming a world-hopper like her, but Janu remains optimistic.</p><p>The pair returns to their physical forms in their own world, where Oki informs them that they were gone for seven hours. Oki emphasizes her desire to stop assisting with world travel, urging them to focus on spirituality instead. Shortly after, Om arrives with food. During a private moment outside, Juna reveals to Om that the train warned her that her time in this world is running out; she will likely disappear soon. She confesses her fear of saying goodbye, as she has never been able to do so in her previous travels. Om advises her that if she must leave, she should at least say a proper farewell to Janu, who is the only other person who truly understands her plight. Juna ultimately decides to join the others for dinner, reconciled to the possibility of her imminent departure.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

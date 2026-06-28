@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu arrives at the hotel to find Mori absent from the front desk. After briefly playing with a plant to draw her attention, Janu confronts her about her whereabouts. Mori claims she was not hiding, but a tense back-and-forth ensues regarding Janu’s constant presence and his tendency to interfere in her affairs, specifically referencing a previous conflict involving Janu’s student, Roni.</p><p>When Mori attempts to leave to deliver some suitcases, Janu insists on helping her, eventually manipulating the situation until she begrudgingly accepts his company on the condition that he does not talk to her. They travel to Downtown Jhizonyu to deliver the items. After the delivery, they end up sharing sushi on a staircase on a cool night.</p><p>During their meal, a deep, emotional conversation unfolds. Janu expresses his confusion as to why Mori continues to spend time with him despite her apparent hatred. Mori reveals that she does not truly hate him, admitting that this fact terrifies her. She confronts Janu about their past trauma—specifically a night where he had his hands around her neck—and explains that while she should despise him, she finds herself unable to, which leaves her feeling vulnerable. Janu apologizes for his past actions and expresses regret. The event concludes with Mori thanking him for the food and heading toward the dorms. Janu is left in contemplation, shaken by her admission that she does not hate him and haunted by the memory of his own past behavior.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

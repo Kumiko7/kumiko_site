@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At the culture festival, Janu meets Sora, a student tour guide, who is currently leading Tami and her friend, Ito, through Jhizonyu High. The group discusses the school&#x27;s history and the various staff members, with Tami revealing that she was forced to drop out before graduation to care for her sister.</p><p>Janu is given a choice to reflect a branching narrative path: he can proceed with a &quot;dating&quot; dialogue (implying a romantic connection with Tami) or a &quot;friends&quot; dialogue. As the tour concludes, Tami sets out to surprise her sister, Tora. The conversation shifts toward gossip and failed relationships, eventually involving Niji, an older acquaintance of the group. Tami flirtatiously attempts to engage Niji, only for her friend Lina to intervene, revealing that Niji is gay.</p><p>The interaction is interrupted by the arrival of Ryu, who causes tension due to her past history with Ito. Following a heated confrontation between the two ex-lovers, Ryu departs with Niji, leaving Ito visibly distraught. The event concludes with Janu encountering Dayai and Sora, who are managing festival logistics. After Dayai leaves, Ito approaches Janu and drags him away from the courtyard, forcing Janu to accept that his plan for the day has changed.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

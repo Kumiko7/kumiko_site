@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu approaches Nirima in the dorm common room and finds her aggressively scrolling through her phone, uncharacteristically distracted and without her usual book. Their interaction begins with typical snarky banter, but the atmosphere grows tense as Janu observes that Nirima seems unusually upset, mirroring the temperament of her peer, Mori.</p><p>Anii interrupts the pair to discuss student council duties, revealing that she and Nirima are in trouble with the principal due to overspending on the school&#x27;s Christmas party. When they realize they lack the key to the student council room where their records are kept, Janu offers to let them in, but only after forcing Nirima to ask him nicely—and with a smile.</p><p>Once inside the council room, the girls confirm that the financial situation is dire, with Anii blaming their peers Dayai and Tora for the excessive costs. Nirima appears to be deeply preoccupied and struggling with her usual social detachment. Later, Janu joins Nirima by the window to ask her about a game, but she remains distant and moody. Janu notices she is wearing contact lenses instead of her usual glasses, though she remains evasive about her shift in behavior. The scene concludes with Anii calling for Nirima&#x27;s help again, leaving Janu to reflect on the strange, mellowed demeanor of his student before he departs to handle the overspending issue with Dayai and Tora himself.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

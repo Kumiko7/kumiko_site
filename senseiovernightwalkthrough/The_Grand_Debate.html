@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu, accompanied by Tora and the rest of their class, gathers at the Debate Club for a &quot;Special Debate&quot; hosted by Zena. Zena reveals that the topic of the evening is &quot;Family,&quot; specifically focusing on the actions of her cousin, Hana. She publicly exposes Hana by displaying incriminating screenshots of a long-term, sexually explicit relationship between Hana and Zena’s father, Hasebe.</p><p>The revelations cause shock and disgust among the gathered students. Zena systematically dismantles Hana’s reputation, accusing her of manipulating her father and using her connection to him to mask her own loneliness and insecurities. As the class turns against her, Hana attempts to flee the room, but Zena reveals she has locked the door to ensure her cousin faces the full force of the public humiliation. The event concludes with Zena forcing Hana to confront the evidence of her &quot;debauchery&quot; before finally allowing her to escape, leaving the class stunned by the depth of the betrayal and the toxic dynamic between the cousins.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

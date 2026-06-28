@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu returns to school for the first time in six weeks following his mysterious illness. Dayai fills him in on the state of their apartment, mentioning the unexpected arrival of two birds, Spudge and a chicken. Janu’s &quot;niece,&quot; Juna, joins their conversation, and the group discusses their plans for the day; Juna decides to shadow Janu at school while Dayai heads to the mall with her friends.</p><p>As Dayai leaves to catch up with a classmate, Juna pulls Janu aside to apologize for mentioning the &quot;Sensei-not-Sensei&quot; rule in front of Dayai, admitting she is struggling to act naturally to avoid being &quot;erased&quot; or causing timeline disruptions. After Juna leaves, Janu is approached by Eruka, who has been watching them. They share a moment where Eruka thanks him for his past support and flirts with him.</p><p>Janu eventually heads to class, where he receives a mixed, often hostile, reception from his students. Tuli is happy to see him, but Nirima expresses annoyance over his long absence and the extra work it forced upon her. Janu also reunites with Anii and Tora, mediating a dispute regarding the classroom seating plan and confirming Juna’s enrollment. Dayai officially introduces Juna to the class as her cousin. When Kio asks for interesting stories about the teacher, Juna playfully humiliates Janu by sharing embarrassing childhood anecdotes, leading to a heated, private meta-commentary between them about the ethics of exposing past experiences before the class. The event concludes with Janu lamenting his lack of authority and questioning why Juna seems to follow a routine of teasing him before &quot;running away.&quot;</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

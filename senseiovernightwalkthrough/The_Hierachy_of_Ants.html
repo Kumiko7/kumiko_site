@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu spends an hour lazily observing ants in the grass, reflecting on the efficiency of the colony and the existential implications of the queen’s leadership. Juna approaches Janu, questioning why he is staring at the sun and dismissing his existential musings as typical behavior. Their conversation shifts to the topic of &quot;soul walking&quot; or astral projection; Janu notes that while he is sensitive to this, Juna only perceives him when she is also projecting.</p><p>Depending on earlier player choices, Janu either reflects on his recent interactions with Dayai or his isolation in his room. Juna expresses frustration about finding a direction for the upcoming culture festival, noting that everyone else has a plan. They discuss their plans for the festival—Janu intends to wander and visit the maid café, while Juna considers helping Chinaka with a drinks stall. Tuli eventually joins them, noting that she has been busy helping D&#x27;vala with warm-ups for the sports events, though she observes that D&#x27;vala seems to have forgotten who she was before school resumed.</p><p>As Tuli leaves, Janu asks her for a private conversation in the near future. After she departs, Juna challenges Janu about his complicated feelings toward D&#x27;vala. She warns him against using D&#x27;vala&#x27;s current vulnerability for his own gain, urging him to decide whether he views her as a romantic prospect or simply a ghost of his past. The event concludes with Janu on the metro, feeling a sense of listlessness, contemplating his desire for D&#x27;vala to prove the sincerity of her love, and realizing his train is heading to an unknown station far from his apartment.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

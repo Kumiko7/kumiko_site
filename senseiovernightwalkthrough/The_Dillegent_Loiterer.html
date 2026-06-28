@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits Hana at her apartment to check on her after her recent public falling out with her cousin Zena. He finds Hana in a state of severe depression, surrounded by her cousin Aisha, who is frustrated by Hana&#x27;s refusal to recover or engage in normal activities. After Aisha leaves, Janu confronts Hana about her listless behavior, leading to a candid conversation about her self-worth and the &quot;veil&quot; of the persona she has been presenting to the world.</p><p>Hana confesses that she feels hollow and defines herself as a liar who has been deceiving everyone, including Janu, by pretending to be a brilliant, studious intellectual. She expresses deep insecurity, believing she is an attention-seeking &quot;jezebel&quot; rather than a genuine student. Janu attempts to bridge the gap between them, dismissing her extreme self-loathing while acknowledging that their dynamic has been shaped by mutual manipulation and sexual tension.</p><p>The scene culminates in Janu persuading Hana to leave her apartment for some fresh air, noting that she has lost all sense of pride in her appearance and demeanor. As they walk together at night, Janu challenges Hana’s perception of herself, critiquing her abrasive personality while simultaneously validating that she is not as &quot;tarnished&quot; as she believes. The interaction concludes with a fragile sense of progress, as Hana finds comfort in Janu’s presence, though she remains deeply conflicted about her identity and her past actions. The event ends with Janu feeling a sense of accomplishment for having reached through to her, while acknowledging the complex, potentially manipulative parallels between his own nature and the toxic dynamics Hana has been trapped in.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

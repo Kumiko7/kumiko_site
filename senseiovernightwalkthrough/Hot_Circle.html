@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Zena hosts an open-floor event at the culture festival where students anonymously submit and discuss provocative statements. Janu and the other students participate in a series of guided discussions:</p><p>1. **Wait until marriage:** The group debates the sanctity of marriage and intimacy. Characters like Oki express a desire for traditional trust and commitment, influenced by her parents&#x27; marriage, while Kio and others dismiss the importance of grand spectacles, viewing intimacy as a matter of personal connection rather than social or religious standards.</p><p>2. **The difficulty of change:** A heated argument breaks out between Juna and Oki. Oki accuses Juna of being selfish and entitled, while Juna labels Oki as bitter for not confronting the real sources of her frustrations. Roni criticizes both for failing to address the actual prompt. During this, Roni reflects on her own life, noting how she successfully adopted a &quot;role&quot; to fit in with the wrong crowd, only to end up feeling trapped in her current situation.</p><p>3. **Image struggles:** The final discussion centers on physical and psychological insecurities. The students discuss the pressures of social media, beauty standards, and the desire for validation. Juna reveals a hidden insecurity about her beauty spots, while others discuss body image issues related to size and physical features. The event concludes with the students acknowledging the complex, often negative impact of constant exposure to curated, fake beauty on social media.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

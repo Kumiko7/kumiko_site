@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu wakes up on a Saturday morning feeling uninspired and lethargic. His plans change when his niece, Dayai, enters his room and crawls into his bed. After some bickering about boundaries, they discuss their plans for the upcoming winter festival. Dayai reveals that while her friends and Juna are going shopping, she is free and asks to spend the day alone with Janu.</p><p>The two head to the plaza, where Janu helps Dayai pick out a new yukata. Afterward, they visit a fast-food diner owned by Tami Chura. Tami surprises them by mentioning a previous date she had with Janu, leading to an awkward moment of jealousy from Dayai. After they leave, Tami invites Janu to a gathering at her friend Wendy’s apartment for an evening of drinking. Janu accepts and invites his acquaintance, Ryu, to join them.</p><p>At Wendy’s, Janu introduces Ryu to the group. Ryu is overwhelmed with excitement to meet her high school idol, Tami, whom she hasn&#x27;t seen in eight years. The group dynamics shift as Wendy expresses anxiety about hosting guests. Janu receives a phone call from Juna, who is feeling alienated at a sleepover with Eruka, Sora, and others and asks to join Janu’s group. Janu declines, encouraging Juna to stick with her friends. The event concludes with Juna returning to her friends, where they discuss their curiosities about Janu&#x27;s life and his relationship with Dayai.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

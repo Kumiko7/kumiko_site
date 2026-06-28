@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Manual Walkthrough Required:</b> This event is logic-gated or too complex for the automatic parser.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Following the graduation party and his sudden auditory loss, Janu finds himself on a metaphorical train, struggling to reconcile his past with the prospect of a new, potentially corrupting future. He experiences a series of disjointed memories involving his aunt, Dayai, and his past relationships, which reveal the existence of a higher entity—an overseer—who claims to be a variant of Janu himself.</p><p>This overseer admits to manipulating Janu’s life to prevent a previous, more powerful version of Janu from surpassing him. He confirms that the original Janu was discarded into a &quot;nightmare plane&quot; and that he has been using Janu’s body for his own observations. The overseer demands that Janu continue living his life as a teacher, promising less interference in exchange for Janu’s cooperation when the &quot;train&quot; eventually demands answers.</p><p>After the encounter with the overseer, Janu speaks with an enigmatic entity that claims to be working for the overseer. The entity expresses pride in Janu’s progress and encourages him to enjoy his new life as a teacher without restraint. If the player chooses to wait for the train, Janu experiences a final, poignant memory of his past relationship with Valda, reflecting on their shared struggle as social outcasts and Valda’s eventual death, which concludes the sequence before he transitions into the next chapter of his life.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu encounters Chinaka and Kio in the school&#x27;s common room on a weekend evening. The two students playfully taunt Janu, questioning him about rumors regarding his anatomy and his previous interactions with Anii. They claim to be looking for a teacher to accompany them, ultimately inviting him to a private room for what they suggest will be an intimate experience.</p><p>Upon arriving, Janu discovers Zena waiting for them. It becomes clear that the trio has lured Janu there under the pretense of a group sexual encounter, only to reveal that they intended for him to join them in watching an obscure, sexually explicit horror film. Despite feeling initially misled and frustrated, Janu decides to stay for the movie.</p><p>As the film plays, Zena positions herself next to Janu, and they begin to engage in secret sexual activity while Chinaka and Kio watch the movie. Zena uses the situation to interrogate Janu about his past sexual encounters with Eruka, becoming highly aroused as she compares her experience to the stories he shares. Janu eventually brings Zena to a climax while maintaining the charade that they are simply focused on the film. Afterward, Janu reflects on the illicit thrill of the encounter, noting that the spontaneous and detached nature of the event left him feeling satisfied yet indifferent to any deeper emotional implications.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

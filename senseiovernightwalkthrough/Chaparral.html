@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At label `backtothebeginning6`, Janu visits the school book club, feeling mentally exhausted after a stressful day. He observes members Nokana and Hana bickering over the design of a club recruitment poster. Hana insists the font is too aggressive, while Nokana defends it as necessary for visibility. Janu intervenes, noting his own detachment as club president, while Hana and Nokana praise his literary eloquence.</p><p>During the meeting, Hana leaves to use the restroom, leaving Janu alone with Nokana. Janu, acting as though he has memory loss, questions Nokana about his life and the club’s dynamics, including whether he has kissed her or if he prefers students to address him casually. Nokana becomes flustered but admits she is drawn to his calm demeanor.</p><p>Following the meeting, Janu boards a bus home, troubled by the uncanny, &quot;carbon copy&quot; nature of this world and questioning whether the people around him—and himself—are merely vessels for split souls. The bus takes a wrong turn into a surreal, overgrown &quot;forest&quot; landscape. There, Janu discovers a spectral, non-physical guitar that appears to respond to his presence. The scene concludes with Janu returning home, where he dismisses Dayai’s attempt to socialize, retreating to his room to sleep.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

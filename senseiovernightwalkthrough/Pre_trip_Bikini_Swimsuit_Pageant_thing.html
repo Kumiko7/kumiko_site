@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -66,4 +72,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [1, 2, 3, 4, 5]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span> <span style='color:#777;'><i>(x3)</i></span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu attends a &quot;Bikini Swimsuit Pageant&quot; organized by Sora for Class 3B, which doubles as a pre-trip event for their upcoming Okinawa excursion. The event involves students modeling swimwear and having their appearance and fashion sense rated by Janu, Chinaka, and Nokana using tablets.</p><p>The scene begins with a casual, meta-humorous conversation where Janu discusses his recent struggles with &quot;sticky keys&quot; on his laptop and his shared distaste for Hana Yuna alongside other staff members. Once the pageant commences, Kio is the first to model. She jokes about her lack of preparation and shares her hypothetical plans for spending 100,000 yen, including buying gaming hardware and gifts for friends. Janu provides a score for Kio&#x27;s presentation, which triggers reactions ranging from playful mock-hostility to genuine excitement depending on the rating chosen.</p><p>Chinaka follows, modeling a one-piece swimsuit and providing an intellectual critique of gender-based world leadership when asked by Sora. The atmosphere remains lighthearted, punctuated by banter between Kio and Nokana regarding pop culture. The event continues with Janu tasked with scoring Chinaka’s performance, maintaining his role as a judge alongside the students.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

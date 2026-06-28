@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Dayai, Tora, and Tuli discuss the recent release of their foster fox, &quot;Benji,&quot; into the wild, reflecting on how the experience brought them closer together. The group shifts their focus to planning for the upcoming Jhizonyu Winter Festival, which has been delayed by one day to accommodate a larger fireworks display.</p><p>During the conversation, Tuli expresses annoyance at Tora and Dayai’s persistent, over-protective behavior regarding her injury. To ease the tension, Tuli requests that the two apologize to Nirima to help clear the air after their past conflict. Despite initial resistance, Dayai and Tora agree to talk to Nirima. The group also decides to host a sleepover at Tuli and Tora&#x27;s dorm on Saturday night before the festival. Juna and Kio join the group, and it is decided they will also attend the sleepover. Kio mentions she will be unable to attend the festival itself due to her responsibilities housesitting for her parents, but she agrees to join the girls during the day for Tora to do her hair and makeup. Tora playfully asserts her role as the &quot;Make-up Queen&quot; of the group, ending the meeting with lighthearted banter about their upcoming plans.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

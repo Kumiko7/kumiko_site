@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>In this scene, Janu arrives at the gym for a workout coached by Anii. Anii is exceptionally intense, pushing Janu to his limits on the treadmill by demanding he run well beyond his intended 10k goal. During the session, Tora and Sora arrive and openly discuss their interest in Janu, leading to an awkward interaction where Anii tries to maintain focus on training. After Tora mistakenly causes the treadmill to speed up, an argument ensues before Anii finally stops the machine.</p><p>Despite the friction, Anii and Janu engage in a dialogue where Anii reaffirms her role as his coach and expresses confidence in his potential, even though Janu remains exhausted and skeptical of the friendship. The scene concludes with the group shifting focus; Anii helps Sora learn to use the leg press, and Janu reflects on the day&#x27;s training, acknowledging that despite the intensity and Anii&#x27;s abrasive &quot;coach&quot; persona, he values the progress they are making and the deepening bond between them.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

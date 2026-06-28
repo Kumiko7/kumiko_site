@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu arrives at what he believes to be his apartment, only to find it is an unsettlingly accurate imitation of his former home. He is soon confronted by Juna and her two sentient birds, who are also displaced in this new world and are furious at the situation. Juna reveals that they both possess fragmented memories of a graduation that never happened and are now trapped in a reality where they are stuck in their fourth year of high school.</p><p>The birds, Spudge and Dice, intervene to explain their theory that the four of them are metaphysically bound together; as unique entities capable of traveling between planes, their separation could threaten the stability of the entire multiverse. Janu remains skeptical of being so important, but the group agrees they must stick together to survive. Juna and Janu briefly consider a physical &quot;trade&quot; to cope with their distress, but abandon the idea when Dayai returns home. The event concludes with Janu resolving to drop his dual-persona internal monologue, accepting his new identity as this world&#x27;s Janu while wondering if the people he encounters will be familiar versions from his original world or new iterations from this one.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

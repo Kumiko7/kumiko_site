@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -62,4 +68,9 @@
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Who are you?, Why is your neck broken?]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Why is your neck broken?</span></div>
 <div class="step"><b>Menu:</b> [Who are you?, Why is your neck broken?]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Who are you?</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finds himself transported to a surreal, silent landscape consisting only of water and stars. He encounters a mysterious girl who bears a striking resemblance to his aunt, whom he dubs &quot;Broken Necked Dayai&quot; (BND). BND reveals that she exists within Janu&#x27;s mind and exhibits an erratic, unsettling demeanor, mocking his social detachment and emotional repression.</p><p>During their interaction, Janu is given the opportunity to ask BND questions. He learns nothing of substance, as BND dismisses his inquiries with cryptic or evasive responses. BND eventually insists on singing a duet, leading to a disturbing sequence where she hops into a noose hanging from a tree, appearing to revel in the act while displaying signs of physical trauma.</p><p>The scene shifts abruptly to a dark alleyway, where Janu awakens after a blackout. He is confronted by Mori, who reveals that she had to drag him away from a busy intersection where he had been walking and humming to himself. Despite the tension between them, Janu offers a brief, lingering moment of gratitude toward Mori, who remains skeptical of his mental state. The event concludes with Janu lingering in the aftermath of these disorienting experiences.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Yes, No, I don&#x27;t know]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu meets with Dayai by a lake as he contemplates the nature of his upcoming &quot;fresh start&quot; as a janitor at a new school. He expresses deep existential dread, a fear of death, and a sense of isolation despite Dayai’s attempts to comfort him. Janu struggles with his past, revealing a cynical outlook on life and a history of personal loss, specifically involving the death of someone close to him and the absence of a paternal figure. Dayai offers him emotional support, drawing on their past friendship to reassure him that he is not alone in this new environment. After Dayai leaves, Janu experiences a moment of vulnerability where, despite his skepticism, he kneels by the lake to pray for a better outcome for his future, driven by a desperate hope that this time, his plea will be answered. The scene concludes with Janu returning to his apartment, anxious about the start of his new job.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu attempts to practice astral projection in his room, using plants and incense to aid his focus. Depending on the player&#x27;s choice regarding Dayai, either Dayai interrupts him with conversation about his &quot;weirdo energy&quot; and their mutual tension, or Juna assists him while expressing concern over his dangerous, solo attempt at spirit walking.</p><p>Janu eventually succeeds in entering a spiritual state and visits Omina at the shrine. Omina reveals that D’vala had recently visited her, expressing intense internal conflict regarding her feelings for Janu and her struggle to reconcile her past relationship with this new reality. Janu and Omina discuss the &quot;war&quot; within themselves and the nature of their connections. Janu insists that Omina should live for herself rather than solely for her sister&#x27;s sake, successfully convincing her to consider attending the upcoming school Culture Festival on Saturday. The event concludes with Omina returning to her duties, while Janu reflects on their interaction and his hope that she will move past her self-imposed isolation.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

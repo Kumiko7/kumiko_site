@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -66,4 +72,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Anii, Chinaka, Hana, Nirima]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Anii</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At the resort, Janu shares a drink with Wendy Wanasha, who is feeling exhausted and reflective. During their conversation, Wendy opens up about her late husband, Itachi, and their shared history as childhood friends. Janu similarly reveals the loss of his partner, Valda. Their shared experience of grief leads to a heartfelt toast to their students’ futures. However, the emotional moment is cut short when Wendy accidentally spills her drink, ruining her phone and her collection of cat photos.</p><p>Meanwhile, a group of students led by Tora organizes a &quot;Murder Mystery&quot; game. The group includes Dayai, Hana, Anii, Nirima, Chinaka, and Nokana. Tora acts as the Game Master, leading the group through a round where Dayai is chosen as the victim. During the investigation, tensions rise significantly between Hana and Chinaka, who trade insults regarding their personalities and intelligence. After a round of voting results in a tie, Tora grants Nokana immunity, leading to a second round of voting. Ultimately, the group identifies Anii as the killer. The game concludes with Anii claiming victory, while the bitter rivalry between Hana and Chinaka continues, much to the exhaustion of their peers.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

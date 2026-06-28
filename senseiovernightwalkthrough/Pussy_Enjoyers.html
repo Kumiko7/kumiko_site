@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu receives a video call from Omina, who urgently requests his presence at her home to solve an &quot;emergency.&quot; Upon arrival, Janu discovers the crisis was merely Omina failing to realize her phone was set to airplane mode. After Janu helps her resolve the issue, the two sit down to meditate, discussing their evolving friendship. Omina confesses that she continues to play the visual novel &quot;Katawa Shoujo&quot; with Janu because she values their time together, even though she lacks interest in the game&#x27;s subject matter.</p><p>Omina admits she is fond of Janu beyond their shared interest in spirituality, leading to a lighthearted discussion about their status as &quot;friends.&quot; Omina suggests they might become &quot;friends with benefits&quot; in the future. Seeking a new shared activity, Omina invites Janu to accompany her to a cat café in Okakri. At the café, where the cats are stuffed replicas, Omina dons complimentary cat ears. At Janu&#x27;s prompting, a flustered Omina performs a &quot;meow&quot; for him, which leaves Janu joking about wanting to adopt her into his family. The outing concludes with Omina expressing her comfort with her current life and her desire to continue exploring new social experiences with Janu.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

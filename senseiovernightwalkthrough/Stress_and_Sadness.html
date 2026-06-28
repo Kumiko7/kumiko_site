@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -66,4 +72,11 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Let’s date, Let’s remain friends]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu receives a phone call from Tami’s younger sister, Tora, who is worried about Tami’s uncharacteristic behavior following a recent, embarrassing interaction with their mother. Tora asks Janu to check on Tami, who has left her phone behind and retreated to a local diner. Upon arriving, Janu finds Tami in a distressed state, drinking alone in the morning.</p><p>Tami confesses that she is overwhelmed by the pressure of managing two failing businesses, the burden of raising Tora, and the emotional toll of her mother’s recent visit. During their conversation, Tami reveals that her mother had cruelly divulged intimate details about Tami’s past, deeply shaming her.</p><p>Depending on the player&#x27;s prior relationship status with Tami, the encounter takes one of two directions:
+- If Janu previously engaged in sexual relations with Tami, she admits to feeling stressed and horny, leading the two to have sex in the diner.
+- If Janu previously rejected her, Tami asks if he has reconsidered dating her. Janu chooses to remain friends, prompting a somber conversation about boundaries. Tami ultimately accepts this, though she remains visibly heartbroken.</p><p>The event concludes with Tami left in an emotional state, either recovering from the encounter or sobbing in solitude after being rejected again. Janu leaves the diner, contemplating the complexities of his connection with both Chura sisters.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

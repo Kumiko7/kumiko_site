@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Eruka arrives at her tutor session with a surprisingly serious demeanor, requesting to be tutored instead of discussing her usual personal interests. Janu is caught off guard by her uncharacteristic focus and becomes suspicious, sensing that she is upset or hiding something. As the session progresses, they bond over a book about the French Revolution, leading to a lighthearted debate about Janu&#x27;s growing role as a &quot;proper&quot; teacher.</p><p>Following the lesson, the atmosphere shifts as Eruka awkwardly prepares to leave. Janu, internally conflicted about exploiting the private knowledge he gained from her dream, suddenly blurts out a secret about Eruka’s past—that she was born with a club foot—to break the tension. This revelation triggers a transformative moment; Eruka is shocked by Janu&#x27;s intimate knowledge of her history, and they proceed to have a candid, emotional conversation about their spiritual connection and mutual feelings. Janu, feeling as though he has lost control over his own words, continues to open up. The encounter culminates in a series of intimate kisses, leaving both characters in an ambiguous but deeply changed state regarding their relationship as they eventually part ways.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

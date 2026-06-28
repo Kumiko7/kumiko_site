@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits Roni in the school courtyard, where they engage in their typical banter regarding Roni’s feigned indifference toward him and his physical presence. Roni eventually invites Janu to her home, clarifying that the invitation is not for sexual purposes. Upon arriving at the Ranihori household, Janu discovers Roni has a creative studio filled with books and a prop axe named &quot;Slashy.&quot;</p><p>Roni reveals she is struggling with advice from her therapist, who suggested she make amends with people she mistreated in the past. Admitting she is too cowardly to approach anyone on her own, Roni asks Janu for his help in providing the extra push she needs to move forward with these reconciliations. Janu agrees to support her in this process. They decide to begin with Mori, whom Janu suggests they can encounter at the hotel where she works on weekends. The event concludes with Janu acquiring Roni’s phone number so they can coordinate their future efforts to confront her past.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

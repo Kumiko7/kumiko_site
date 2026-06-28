@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -66,4 +72,11 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Let’s test out your bedsheets, Let’s call it a night]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu attends a date night event organized by Eruka at a local restaurant, intended for his students and their acquaintances. After being greeted by Eruka, who expresses embarrassment over not having his number, Janu is directed to have two separate short dates.</p><p>His first date is with Lina, who is initially cold and skeptical. Their conversation turns into an impromptu therapy session where Janu admits feeling insecure about his teaching abilities and his struggle to understand why his students are so attached to him. Lina advises him that the students simply need a supportive listener and warns him against taking advantage of their emotional vulnerability.</p><p>Janu’s second date is with Tami, who is much more flirtatious. She vents about her previous date being boring and clearly enjoys Janu’s company. As the event concludes, Tami invites Janu back to her apartment to &quot;test out her new bedsheets.&quot;</p><p>The player faces a choice:
+1. Accept Tami’s offer: Janu goes home with Tami, leading to an intimate encounter. They spend the night together, with the option to engage in a roleplay scenario involving a dog mask.
+2. Decline the offer: Janu chooses to call it a night, citing his desire to avoid making Tami&#x27;s sister, Tora, uncomfortable. Tami respects his decision and declares herself his new matchmaker.</p><p>After the dates conclude, Janu helps Eruka clean up the restaurant. The night ends with Janu feeling he made the right decision regarding his interactions with Tami, and he reflects on the complexity of his role as a teacher.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

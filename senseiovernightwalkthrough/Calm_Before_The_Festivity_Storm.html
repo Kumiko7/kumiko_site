@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At the Student Council room, Tora and Eruka work on administrative spreadsheets for the upcoming school festival. During their collaboration, they discuss their strained relationships with their respective families and the lack of communication within their social circles. Eruka observes that the protagonist, Janu, appears to be in love with D’vala, noting his tendency to keep his true feelings hidden from his peers.</p><p>The focus shifts to the Student Council president, A, and vice president, N, as they mentor Fareeda on her role as the acting festival manager. They encourage her to be more assertive, specifically instructing her to hold the festival guides accountable for their tardiness. When the guides, Sora and D’vala, eventually arrive, Fareeda adopts a strict tone and reprimands them for their lack of punctuality.</p><p>Meanwhile, Kio struggles to conduct a dress rehearsal for the maid café, finding the cast—specifically Mori—uncooperative and lacking the necessary &quot;Tsundere&quot; attitude. Tensions rise as the group bickers, but the rehearsal eventually proceeds after Kio manages to provoke Mori into character. The scene concludes with the arrival of Ch, who unveils the finished maid uniforms, complete with custom-painted dog ears. The group, despite their initial resistance and internal conflicts, begins to prepare for the festival, with Kio expressing extreme excitement over the costumes.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,12 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits Tora at her dormitory to discuss her upcoming university plans and her recent work experiences with her sister, Tami. Tora expresses relief that she has found direction through a Classical Literature course, a choice inspired by Janu and Nokana&#x27;s previous encouragement. To make up for being busy recently, Tora invites Janu on a picnic at a nearby park.</p><p>During their conversation at the park, Tora reflects on her complex family dynamics, specifically her past resentment toward her sister and her desire to avoid the patterns of broken relationships modeled by her mother and sister. Tora confesses that she has feelings for Janu but insists on waiting until they are no longer in a teacher-student dynamic before acting on them, hoping to protect her fragile friendship with Janu’s niece, Dayai.</p><p>Depending on previous narrative choices, the scene diverges significantly:
+- In a standard path, Tora shares an intimate moment with Janu, kissing his cheek and asking him to remain patient until they graduate.
+- If Janu has engaged in a relationship with Hana, Tora confronts him about a scandalous recording Hana shared, leading to Tora expressing deep disappointment. She decides to distance herself from Janu and asks him to avoid the salon, ending their potential for romance.
+- If Janu is dating Tora’s sister, Tora accepts the awkwardness of the situation, agreeing to maintain their current sibling-like bond while acknowledging that her feelings for Janu persist.</p><p>The event concludes with Janu reflecting on Tora’s emotional maturity and his hope for their future once the professional barriers of high school are removed, or mourning the loss of their connection if trust was broken.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

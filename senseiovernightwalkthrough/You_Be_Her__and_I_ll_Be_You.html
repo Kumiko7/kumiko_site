@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finds himself in a hospital room, experiencing a surreal sense of familiarity despite his confusion about how he arrived. As he wanders the room, he encounters Broken Necked Dayai, who engages him in a strange &quot;hide and seek&quot; game. Dayai insists on a roleplay performance where Janu pretends to be his dying mother while Dayai plays his younger self.</p><p>During this reenactment, Janu explores the painful nature of his mother&#x27;s final days, revealing his deep-seated feelings of inadequacy and his struggle to &quot;fix&quot; his broken family dynamic. The performance dissolves into emotional tension, with Janu’s mother figure lamenting his obsession with protecting her and the burden of their mutual suffering. As the roleplay concludes, the boundaries between the game and reality blur, leading Janu to experience a violent psychological episode where he begins to physically strangle the hallucination of Dayai.</p><p>The scene is interrupted by Mori, who discovers Janu behaving erratically in the hospital room. Mori expresses disgust and concern, labeling Janu a psychopath for his behavior and questioning his grasp on reality. Janu offers a half-hearted apology, but Mori remains deeply unsettled, eventually ordering Janu not to follow her and leaving him alone in the room.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

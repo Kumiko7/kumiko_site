@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At the start of the Okinawa trip, Janu is confronted by his pet birds, Spudge and Dice, who have packed suitcases and plan to sneak their way onto his vacation. Despite Janu’s objections, the birds remain persistent. Janu is then contacted by Kio, who urgently demands he head to the airport. Upon arriving, Janu meets Kio and Tuli, and the trio eventually boards their flight.</p><p>Once they reach the resort, Janu encounters Zena, who has paid for his room and insists on escorting him there. During their interaction, Zena openly flirts with him and reveals that she stayed in the same room the previous year. After Janu settles in, he receives a text from Kio regarding room assignments and Tuli’s invitation to the beach. Janu joins Tuli at the beach, where they enjoy the sunset and discuss the trip before he is approached by Ryu and Tami. Tami, who is quite intoxicated, introduces Janu to their bartender, Azula. The group discusses a plan to get Tami drunk to facilitate a potential romantic encounter. The scene concludes with Tami drinking more as the group socializes and prepares for the night ahead.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

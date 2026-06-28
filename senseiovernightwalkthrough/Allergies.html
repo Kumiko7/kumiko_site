@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu approaches Mori in the common room, their first significant interaction since a traumatic past incident involving an attempted strangulation. Mori is visibly cold and dismissive, ignoring Janu’s persistent attempts to start a conversation. Janu eventually sits directly next to her, pushing for engagement until she finally acknowledges him with visible irritation.</p><p>During their tense exchange, Mori criticizes Janu&#x27;s shallow, trope-heavy perception of the students, which Janu acknowledges as part of his cynical worldview. The conversation takes a darker turn when Mori confronts Janu about his violent past, specifically questioning if his niece, Dayai, knows about his tendency to assault teenage girls in alleyways—a secret Janu admits to keeping from her. Despite Mori&#x27;s desire for him to leave, Janu refuses, insisting he will stay until he is bored.</p><p>Janu attempts to lighten the mood by mentioning a recent, seemingly pleasant memory of Mori befriending a dog at a park, but she vehemently denies it, claiming to be allergic to dogs and insisting he is delusional or lying. The event concludes with Janu leaving the common room with Dayai, noting that Mori remains deeply upset, while the unresolved tension between them continues to linger.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

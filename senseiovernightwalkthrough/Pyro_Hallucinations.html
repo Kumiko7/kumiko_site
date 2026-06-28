@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finds Oki searching for Eruka, who has been acting strangely. After a search, they discover Eruka in a study room, transfixed by her reflection in a mirror. Eruka is in a fragile, vulnerable state, struggling with the news that her grandmother has suffered a severe heart attack and may not survive.</p><p>During their conversation, Eruka confesses to a traumatic secret: she blames herself for her grandfather&#x27;s death, which occurred years ago during a fire caused by her habit of leaving the stove on. She believes her grandmother hates her for the scars she bears as a result of that accident and feels deeply unworthy of love or kindness. Eruka shares her intense fear of being alone and her complicated feelings about her own destructiveness. Janu offers emotional support, affirming her beauty despite her pain. The event concludes with Eruka falling asleep in the study room, with Oki staying by her side to keep watch, while Janu reflects on Eruka&#x27;s volatility and the importance of supporting her through her crisis.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

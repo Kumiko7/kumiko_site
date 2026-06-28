@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>The following morning, Janu wakes up and speaks with his bird, Spudge, who reveals that Tora and Hana had been in his room the previous night. Spudge provides a fragmented account of the girls&#x27; activities, confirming that they had interacted with Janu while he was asleep, specifically mentioning his &quot;doodle&quot; (penis) and suggesting that they had taken advantage of him while in a drunken, curious state. Janu dismisses the idea of confronting them for their actions, reasoning that they were likely too intoxicated to remember the incident.</p><p>When the group gathers for the day, the atmosphere is heavy with the aftereffects of the alcohol. Tora, Dayai, and Tuli are all suffering from severe hangovers. Janu casually observes their condition, subtly noting the previous night&#x27;s events without explicitly calling them out. The group discusses their upcoming plans to visit a boutique spa, though they are already behind schedule. The conversation highlights the lingering confusion regarding the previous night, with the girls struggling to piece together their memories, while Janu remains aware of the truth but chooses to keep his composure as they prepare to head out into the city for the festival.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

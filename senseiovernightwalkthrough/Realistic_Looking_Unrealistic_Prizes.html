@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -64,4 +70,9 @@
 <div class="step"><b>Menu:</b> [Aim slightly upwards, Aim slightly downwards]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Aim slightly upwards</span></div>
 <div class="step"><b>Menu:</b> [Aim slightly downwards, Aim slightly left]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Aim slightly downwards</span></div>
 <div class="step"><b>Menu:</b> [Aim centre, Aim slightly right]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Aim slightly right</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits a festival game stall run by Nirima, who provocatively challenges him to win a prize by shooting targets with a realistic-looking toy revolver. Despite Dayai’s presence and encouragement, Janu struggles with the game&#x27;s mechanics, leading to a series of frustrated exchanges between him and the taunting Nirima. The scene features a branching menu system where Janu attempts to aim his shots; regardless of his specific directional choices, he faces multiple misses and verbal sparring with Nirima. The event concludes with a high likelihood of failure, leaving Janu irritated by Nirima’s mockery and the loss of his entrance fee.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

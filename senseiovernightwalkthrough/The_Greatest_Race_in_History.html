@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Spudge stops Janu in the morning to discuss their day, eventually revealing that he has invited Dice the chicken over for a visit. Janu is surprised, as he was not consulted about the guest, and questions how a supposedly flightless bird managed to reach his apartment. The two birds engage in cryptic bickering, hinting at a secret bet between them.</p><p>The trio heads to the school track, where they are joined by Tuli. Janu explains to Tuli that the birds have decided to hold a foot race. Intrigued, Tuli and Janu place bets on the outcome, with Tuli backing the chicken and Janu supporting Spudge. During the race, Dice takes an early lead, but Spudge taps into a surge of speed to overtake him and secure the win. Following the race, the birds return to their mysterious, private dialogue. After Tuli leaves, Janu decides to head home, reflecting on the surreal reality of having literate, betting birds as friends.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

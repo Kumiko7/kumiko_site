@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits a garden hoping to clear his mind and encounters Oki, who is distressed and hostile toward him. Oki expresses deep resentment, accusing Janu of being responsible for their current situation—stuck in a foreign world—and for the radical personality shifts in her sister, Omina. Janu apologizes, but Oki dismisses his regret as a manipulative facade, revealing she has seen glimpses of other versions of him in different worlds who abused their power.</p><p>Their confrontation escalates when Janu attempts to touch her, prompting Oki to instinctively use an astral projection ability that separates Janu’s soul from his body. Despite his pleas for guidance and help in navigating this world, Oki remains resolute, declaring their friendship permanently destroyed and warning him that he will soon discover his own true, destructive nature. The event concludes with a shift in focus to Omina, who is diligently cleaning a shrine in this new world. She is approached by a lost traveler seeking guidance, and Omina offers to pray with them, revealing her own sense of displacement as she grapples with her new reality.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

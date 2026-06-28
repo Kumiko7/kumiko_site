@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Yes, No]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>At the end of the class trip, Mori approaches Janu to seek advice before confessing her feelings to her estranged friend, Nokana. Janu, while on vacation, listens as Mori expresses her fear of permanently ruining their already fragile relationship. Janu advises her to be direct and warns her not to view a potential lack of response as an outright rejection, acknowledging the complexity of emotional teenagers.</p><p>Following the advice, Mori meets with Nokana. Despite attempting to reconcile, Mori ultimately confesses that she has been in love with Nokana since middle school. Overwhelmed and unable to reciprocate, Nokana leaves abruptly, leaving Mori heartbroken.</p><p>Mori subsequently tracks down Janu at his room, feeling unable to face her other friends. The two engage in a quiet, candid conversation about poetry and Janu’s personal struggle with self-destructive thoughts. Despite Mori&#x27;s initial hostility, she decides to stay the night in Janu&#x27;s room to avoid her peers, marking a moment of mutual vulnerability between the two.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

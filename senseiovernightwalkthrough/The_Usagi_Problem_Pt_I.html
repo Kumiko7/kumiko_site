@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Following Janu’s call, Juna arrives at his office to find a semi-naked, distraught woman who claims the room is her own office. The woman reveals her name is Anju Usagi and explains that she has been trapped in this world since the winter festival, plagued by deafening &quot;whispers&quot; and high-pitched noises whenever she tries to leave. Janu and Juna realize that Anju is a version of themselves from another reality.</p><p>Anju continues to suffer from auditory hallucinations that seemingly speak to Juna. During a particularly intense breakdown, the whispers address Juna directly, claiming to know her secrets and taunting her about a past traumatic event involving a jump from a railing. The scene descends into a surreal, hallucinatory experience for Juna, where she briefly interacts with a version of a deceased loved one named Valda.</p><p>After Juna experiences a collapse and hits her head, she eventually recovers, though she remains deeply unsettled. Janu and Anju worry about her condition, and Juna chooses to leave the room to clear her head. Left alone with Janu, Anju is filled in on the nature of their situation while Janu begins to process the disturbing implications of the whispers and Juna&#x27;s mysterious connection to these parallel versions of herself. The encounter ends with Janu recognizing that he has much to explain to Anju as they attempt to stabilize the chaotic situation.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

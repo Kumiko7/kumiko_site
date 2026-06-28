@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -67,4 +73,9 @@
 <div class="step"><b>Menu:</b> [What’s with the outfit?, Why do you love Paris so much?, How much control do you have over your dreams?, What’s the story with your parents?, These black bars…]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>These black bars…</span></div>
 <div class="step"><b>Menu:</b> [Get rid of them, Keep them]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
 <div class="step"><b>Menu:</b> [What’s with the outfit?, Why do you love Paris so much?, How much control do you have over your dreams?, What’s the story with your parents?, These black bars…, Continue]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Continue</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finds himself back on the mysterious, empty train, reflecting on the nature of existence and the loneliness of being a constant fixture in a cycle of passing variables. Upon arriving at his destination, Janu arrives in a dream version of Paris, where he meets Eruka. She is ecstatic to see him, having successfully conjured him into her dreamscape after many attempts.</p><p>Eruka guides Janu through a romantic, idealized version of the city, complete with cafes, fruit markets, and sunset picnics. Throughout their interaction, Janu questions Eruka about her life, leading her to open up about her history, her complicated relationship with her absent parents, and her insecurity regarding her past mistakes. Eruka reveals that she has been using these dream sessions to explore her feelings and identity, admitting that she has developed strong feelings for Janu. She confesses that she is scared of opening her heart to someone when she feels so damaged, yet she finds comfort in their connection.</p><p>To bridge the gap between their dream world and reality, Janu suggests they create a &quot;safe word&quot; that only they will know—a secret code that would allow them to acknowledge their shared dream experience in the real world. Eruka chooses a deeply personal, secret fact about her childhood—that she was born with a club foot—to serve as their unique link. The event concludes with Eruka thanking Janu for the experience and expressing her hope that they can one day spend time in the real Paris together.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

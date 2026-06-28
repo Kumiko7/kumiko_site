@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu calls Tami to suggest meeting up, hoping for a conversation without the interference of her younger sister, Tora. Tami directs him to a local diner, which she claims has the best ice cream in the city. Upon arriving, the two engage in an awkward &quot;non-date&quot; where they navigate Tami’s flirtatious nature and Janu’s confusion regarding their relationship status.</p><p>Tami playfully teases Janu, suggesting he is a &quot;Hikikomori&quot; (social shut-in) because of his reserved demeanor and lack of dating experience. Janu briefly considers leaving due to Tami&#x27;s uncomfortable behavior, but she apologizes, admitting she struggles to communicate without flirting. As the scene continues, Tami shifts between moments of vulnerability and further advances, repeatedly looking at Janu&#x27;s crotch in the public diner. Before leaving, Tami asks Janu to close his eyes and surprises him with a physical gesture—the nature of which is left ambiguous—before quickly departing. Janu is left bewildered by the encounter, noting that the experience has discouraged him from pursuing further dates for a while.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

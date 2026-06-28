@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [Eruka, Kio, Oki, Me]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu calls Kio to arrange a study session in the school study room. Kio arrives with her friends, Eruka and Oki, all wearing matching glasses for the occasion. Janu adopts a formal &quot;Sensei&quot; persona to conduct the session, prompting a playful exchange where the girls debate who looks cutest in their new glasses; the player&#x27;s choice of compliment briefly influences their interactions.</p><p>The study session proceeds unexpectedly well, with the students showing genuine engagement in learning about constants and variables. After the lesson, the group discusses their plans for the evening. Eruka and Oki decide to head to their dorm to nap, while Kio expresses a desire to stay behind to review the material further with Janu. Once the others depart, Janu and Kio clear the room, transitioning from their student-teacher roles to a more personal dynamic. Kio admits that her previous hesitation to be intimate was due to nerves and reaffirms her romantic interest in Janu, ultimately leading to a private encounter between the two. The event concludes with Kio agreeing to take responsibility for cleaning the study room sheets, marking a significant milestone in their intimate relationship.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

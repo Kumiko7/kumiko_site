@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu takes Hana on a late-night walk to a scenic spot to help her process the recent fallout with her cousin, Zena, and the public exposure of her past actions. During their conversation, Janu confronts Hana about her self-destructive tendencies and her &quot;deer-like&quot; inability to handle stress. Depending on previous choices regarding whether Janu blackmailed Hana or not, the conversation explores different facets of their dynamic.</p><p>If Janu is aware of her perverse history, he admits to using Hana’s desperation for his own gain, noting that he treats her as a convenient, albeit flawed, sexual outlet while dismissing the idea of a genuine relationship. Hana, meanwhile, struggles with the realization that she is &quot;defective&quot; and confesses that her attempts to understand herself through literature have only led to nausea and further confusion. She acknowledges that she seeks out toxic environments, including her past relationship with her uncle, as a means to feel connected to others.</p><p>If Janu is unaware of her full history, he challenges her to drop her defensive, condescending mask, noting that her current state of disarray proves her previous high-and-mighty attitude was just a front. Upon learning that Janu knows about her relationship with her uncle, Hana is devastated but finds comfort in his willingness to see past her mistakes.</p><p>The event concludes with the two stargazing as the weather turns. Janu feels a sense of progress in their relationship, even as he recognizes parallels between his own selfish desires and the manipulative nature of Hana&#x27;s uncle. He leaves Hana with a promise that, while he may consider her &quot;horrible,&quot; he is genuinely interested in uncovering the good he believes still exists within her. Hana departs for home, seemingly having gained a small measure of clarity from their excursion.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

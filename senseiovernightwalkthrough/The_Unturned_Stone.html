@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -66,4 +72,11 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [I’ll talk to her, You talk to her]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>In this event, the player—referred to as Janu—interacts with a new student named D’vala, who claims she has amnesia and insists that Janu is her boyfriend. Janu, now working as a high school teacher in this timeline, is skeptical, noting that D’vala has been behaving erratically since her arrival, including declaring her love for him in front of the entire class. During a conversation, it is revealed that D’vala believes the current year is 2010, the year of her original world, and she possesses memories of a Janu from a different reality.</p><p>While the student Nirima advises D’vala to keep a low profile to avoid bullying, Janu’s nieces, Juna and Dayai, express deep frustration and suspicion regarding D’vala’s presence. Juna, in particular, believes D’vala is an imposter whose body has been &quot;hijacked&quot; and is desperate to uncover why she is here.</p><p>The scene culminates in a choice for Janu:
+- If Janu chooses to speak with D’vala himself, he takes her aside to probe her memories. D’vala confirms that she traveled through the multiverse to find him, believing him to be the Janu she fell in love with. Janu struggles with the realization that while she possesses the traits of his former partner, she is not the same person, leaving him feeling conflicted and uncertain.
+- If Janu chooses to let Juna speak with D’vala, Juna confronts her aggressively, demanding to know who sent her and why she is attempting to manipulate Janu’s life. Juna insists that D’vala is not who she claims to be and warns her to stay away, resulting in a heated, emotional confrontation that leaves D’vala shaken.</p><p>Both paths conclude with the realization that D’vala is an anomaly who has &quot;slotted&quot; herself into this world, and Janu remains burdened by the unsettling parallel between this girl and his deceased partner.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu locates Oki on the school roof, where she expresses frustration with the complex, multi-dimensional nature of their existence and the emotional toll of their supernatural knowledge. Janu attempts to comfort her, and they discuss a request from Juna: to guide Janu’s soul to a specific &quot;past world&quot; to check on an alternate version of himself. Despite Oki’s intense reluctance and fear that Janu might be left comatose or be assimilated by an alternate version of himself, Janu insists that he needs to undertake this mission for both his and Juna’s sake.</p><p>Oki eventually agrees to help, and they travel to a secluded location with Juna. The three of them hold hands and engage in a meditation ritual led by Oki. Janu successfully astral projects and finds himself on an empty train traveling toward the alternate world, designated by the patient number 71815523. Upon arriving in this other dimension, Janu encounters his alternate self—a man who has lost his job and his partner, Dayai, and is currently living in a state of deep despair. This version of Janu reveals that Juna had visited him in his world and helped him, though he remains broken and intends to move away. Before leaving, they share a brief, somber exchange about their respective lives. Janu returns to his own body, leaving Oki and Juna anxious until he regains consciousness. Back in reality, the group decides to part ways, with Janu feeling fatigued but reflective about the mysterious events he has witnessed.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

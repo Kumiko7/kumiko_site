@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu visits a jazz café where Kio is working. After some lighthearted banter regarding Kio’s knowledge of Yu-Gi-Oh cards, Janu orders a snack. While Janu sits outside, Kio joins him on her break. Their conversation shifts from casual chatter about jazz music to the nature of their unconventional relationship.</p><p>Kio expresses vulnerability, admitting that she is confused by her feelings, scared that Janu will eventually lose interest in her, and insecure about her own identity. Janu reassures her, confessing that he is also new to these types of relationships and finding his way as he goes. Depending on previous interactions, the dialogue highlights their growing intimacy, with Kio acknowledging that their bond is evolving beyond simple teacher-student roles. The scene concludes with the two reaching a moment of mutual understanding, and Janu leaves the café after a brief, grounded exchange about their respective lives.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

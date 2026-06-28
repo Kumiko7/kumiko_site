@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>After leaving his abandoned former school, Janu and his aunt Dayai walk across a bridge connecting his old neighborhood to the school. Janu expresses a deep sense of identity crisis, feeling like a &quot;grey area&quot; between his past self and his current life, while Dayai encourages him to view his past as a wall he must overcome by finding a new &quot;door&quot; toward his future.</p><p>The interaction shifts to an emotional moment where Dayai offers Janu a hug. Depending on the player’s choice, the two share a warm embrace or simply stand together in the breeze, reflecting on their shared time in the city. Regardless, they eventually return to Jhizonyu by train. The event concludes with the two arriving back at their apartment, exhausted but grateful for each other’s company, with Janu feeling comforted that he did not have to spend such a difficult day alone.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

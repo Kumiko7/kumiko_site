@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu finally receives his own office, a perk granted by the principal after his class successfully passed standardized tests. He is accompanied to the office by his niece, Dayai, who is eager to celebrate the milestone. While exploring the new workspace, they discover a mini-fridge stocked with alcohol, which Dayai unsuccessfully attempts to use for a celebratory drink.</p><p>The celebration is interrupted by the arrival of Wendy Wanasha, a fellow teacher who expresses exhaustion with her current workload and cat-related woes. Wendy reveals that she is desperate to offload a &quot;problematic&quot; student named Roni Ranihori, who has caused significant friction in her own class. Wendy explains that the principal authorized this transfer to Janu’s class as a strategic move, offering him the office in exchange for taking on Roni.</p><p>Despite his reluctance and concerns regarding the ethics of the situation, Janu is effectively forced to accept the transfer, as Wendy notes that Roni is on her &quot;last life&quot; at the school and will be expelled if she cannot be successfully integrated into a new class. Dayai encourages Janu to embrace his new role, expressing confidence that he will win Roni over as he has the rest of his students. Wendy departs, relieved to be rid of the student, while Janu is left to contemplate the challenges of managing a student with a reputation for being a bully.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

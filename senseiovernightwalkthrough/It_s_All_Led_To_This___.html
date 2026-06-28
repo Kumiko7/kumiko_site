@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu arrives at his resort room to find Hana waiting for him, having once again bypassed security. The two engage in a tense conversation regarding Hana’s recent decision to expose their sexual history to Tora, a move she made to stir chaos and confirm her standing in Janu&#x27;s life.</p><p>The narrative forks depending on Janu&#x27;s previous actions (whether he lied to Tora or admitted the truth). Hana proceeds to degrade herself and exhibit, performing sexual acts in front of Janu to assert her desperation and secure his attention, viewing this as a way to prove she is superior to Janu’s other partners. Janu ultimately demands that Hana beg to be fucked, which she does, acknowledging his authority. They engage in a sexual encounter that serves as Hana&#x27;s sexual debut, during which she struggles with deep-seated insecurity and confusion regarding her feelings for Janu. Following the encounter, Janu experiences a moment of clarity about her self-destructive nature.</p><p>If Janu previously chose to lie to Tora, the event concludes with a post-scene revelation: Hana sends a voice recording of their intimate session to Tora, ensuring Tora discovers the truth and sabotaging the facade Janu attempted to maintain. The event ends as the narrative transitions back to the main Okinawa plotline.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

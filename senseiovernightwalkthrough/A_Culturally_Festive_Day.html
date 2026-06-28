@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -64,4 +70,9 @@
 <div class="step"><b>Menu:</b> [Concave of Literature, Maid Café, Sports Track, Grab a Latte]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Maid Café</span></div>
 <div class="step"><b>Menu:</b> [Concave of Literature, Sports Track, Grab a Latte]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Sports Track</span></div>
 <div class="step"><b>Menu:</b> [Concave of Literature, Grab a Latte]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Concave of Literature</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>The event begins with a prompt for the player to determine if they wish to explore blackmail dialogue concerning the character Hana, setting the narrative direction for the subsequent encounters. Depending on whether the player has visited the Concave of Literature, the Drinks Stand, the Maid Café, and the Sports Track, the scene either transitions to a later plot point or forces the player to engage with the festival&#x27;s various hubs to progress.</p><p>If the player visits the Maid Café, Janu engages with Oki, who begrudgingly serves as a maid while trading barbs about his presence. The interaction reveals tension regarding Mori, who has been avoiding the café, and prompts a brief, uneasy discussion about Janu&#x27;s influence on her and the potential for &quot;multiversal&quot; consequences. Janu eventually forces the issue of food service despite Oki’s resistance.</p><p>If the player visits the Concave of Literature, they find Nokana struggling to recruit members. Janu encourages her, and they discuss their shared interest in literature before Niji, Nokana’s brother, arrives. Their conversation highlights Nokana’s secret attempt to impress Janu by curating his favorite author’s works, leading to an awkward moment where Niji teases his sister about her true motivations and her obvious feelings for her teacher. The event concludes with the player successfully navigating these interactions to move toward the next stage of the festival.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

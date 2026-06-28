@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu enters his living room to find an unfamiliar woman waiting in his bathroom. After an awkward encounter, she reveals her name is Juna Usagi, a version of Janu from a different world. Juna explains her role as a traveler between dimensions, noting that she has met many versions of Janu before and that her sudden appearance is likely tied to a mistake he made. Despite Janu’s initial skepticism, Juna proves her identity by recounting a specific, traumatic memory involving the death of their mother.</p><p>As they talk, Juna explains that she usually awakens in Janu’s or Dayai’s apartments in different worlds, always arriving naked. Their conversation is interrupted by the arrival of Dayai and Tora. To manage the situation, Janu and Juna concoct a story that Juna is a long-lost cousin. Dayai is initially suspicious but eventually accepts the explanation after Juna handles the conversation skillfully. Shortly after, Tami, Tora’s sister, arrives, and the group decides to go shopping, leaving the apartment to Janu, Tami, and the others. The event concludes with Janu reflecting on the day&#x27;s bizarre revelations, struggling to reconcile the existence of an alternate-version of himself with his current reality.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

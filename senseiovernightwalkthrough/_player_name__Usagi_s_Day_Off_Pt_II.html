@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Juna visits the salon to spend time with Tami, a long-time family friend and former classmate of Janu. During their conversation, Tami reveals that her sister, Tora, has been behaving erratically and distancing herself from their mother since the Christmas party, leaving Tami to manage Tora’s upbringing alone. As they talk, Tami plays the role of a supportive listener and &quot;big sister&quot; to Juna, encouraging her to open up about her personal life.</p><p>Juna eventually confesses that she was previously in a relationship while traveling. She describes the connection as transformative, noting that she had learned to stop fearing her constant displacement to be with her partner. However, once the relationship ended, she was left without closure and continues to struggle with the transient nature of her life, feeling like a passenger who cannot settle down or maintain lasting attachments. Tami offers empathetic advice, encouraging Juna to prioritize creating meaningful memories despite her instability. The scene concludes with Tami reaffirming her support for Juna and the two agreeing to keep their conversation confidential.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

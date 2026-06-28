@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu is in the classroom when Juna approaches him, initiating a playful exchange. Juna teases Janu, and the two engage in a witty back-and-forth about their relationship and Juna&#x27;s mysterious nature. Juna admits to struggling with attention in class and expresses a desire to spend time with Janu, noting the difficulty of finding private time at home due to Dayai’s constant presence. Janu suggests sneaking away together on the weekend, which Juna playfully deflects.</p><p>As their conversation turns toward Juna’s adjustment to her new life, she admits that everyone has been welcoming, including Dayai, though she hints at past complexities involving other versions of Dayai that she must keep secret to maintain her mystery and protect Janu.</p><p>The session is interrupted when Dayai arrives late, immediately inserting herself between them and questioning what they were discussing. Juna explains they were talking about her settling in. The trio discusses Juna&#x27;s rapid transfer process, with Janu noting he didn&#x27;t even have to file the usual paperwork. Dayai shifts the topic back to tutoring, claiming she is prepared to learn, though Janu remains skeptical given her history. The scene concludes with Janu begrudgingly beginning the lesson as the girls focus more on each other than the schoolwork, leaving Janu to reflect on his curiosity regarding Juna&#x27;s true thoughts and his desire to understand her better.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

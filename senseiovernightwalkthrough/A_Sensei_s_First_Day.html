@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu begins his first day as a teacher, feeling unprepared and nervous about his lack of professional experience. Upon entering the classroom, he finds the students sitting in a rigid seating arrangement enforced by the previous teacher to maintain discipline. Disliking the atmosphere, Janu allows the students to choose their own seats, though Dayai and Oki remain in place, with the latter sleeping due to jet lag.</p><p>Janu attempts to bridge the gap with his students by offering to answer questions. After a moment of awkward silence, Dayai prompts him to continue with the scheduled math lessons, leading Janu to distribute the provided cover work. The class works in silence until lunchtime, at which point Janu permits them to converse, hoping to cultivate a more relaxed environment for the future. After school, a student named Tora approaches Janu to check on how he is settling into his new role. Tora expresses a preference for Janu over the previous teacher and leaves with a cryptic, potentially flirtatious remark. Left alone, Janu questions whether her comments were suggestive before concluding his day and reflecting on the events during a late-night chat with a contact named Spudge.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

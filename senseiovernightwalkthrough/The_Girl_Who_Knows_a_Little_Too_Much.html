@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Menu:</b> [It exists, It’s a flawed concept]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu encounters Oki and Eruka in the school dormitory common area, where Eruka is preparing to start her own &quot;spiritual awakening.&quot; Oki explains that to truly find one&#x27;s zen, Eruka must practice meditation independently and procure her own supplies. Following Eruka’s departure, Janu and Oki decide to walk together to clear their heads, eventually settling on the school rooftop as the sun begins to set.</p><p>On the roof, Oki creates a private space for them to meditate. As their interaction continues, Janu notes that Oki has become more philosophical and open with him, suggesting they are both in a &quot;discovery stage&quot; of their relationship. Oki poses a question regarding the nature of fate, asking Janu if he believes it is a real force or a flawed concept. The player chooses whether Janu views fate as something that exists for those who believe in it, or as a fundamentally flawed idea. Regardless of the choice, Oki finds Janu’s perspective insightful, acknowledging that she is beginning to see past his persona to the person underneath. The scene concludes with the two continuing their deep conversation, reinforcing the growing bond and trust between them.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

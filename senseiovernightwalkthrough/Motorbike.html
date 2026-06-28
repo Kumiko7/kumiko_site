@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu arrives at the gym for a planned workout with Anii. Upon his arrival, he finds Anii punching a bag and attempting to maintain her usual energetic, albeit awkward, demeanor. During their conversation, Anii explains that she feels &quot;weird&quot; when Janu watches her, though she is trying to overcome her hesitation. The conversation shifts when Anii reveals that Dayai paid her 2000 yen to ensure Janu gets some exercise, revealing their shared concern for his health.</p><p>Anii eventually admits that her motivation for coaching him stems from her caring for him as her first friend at the school. Touched by this, Janu agrees to the training session, officially dubbing her &quot;Coach Anii.&quot; They spend the next two hours on a rigorous routine centered on the treadmill. Although the workout is exhausting and Anii is firm, Janu finds the experience beneficial and feels more motivated than before. The event concludes with Janu acknowledging that he will continue to rely on her services, fostering a deeper bond between them as she takes on her role as his fitness coach.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

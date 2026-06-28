@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu intends to speak with Nirima about a recent unsettling incident at the bookstore, attempting to find an explanation for his uncharacteristic behavior. However, he is intercepted by Anii, who physically blocks his path and warns him to stay away. Anii reveals that Tuli has reached out to Nirima to make amends following a recent conflict, and she wants to ensure the two can reconcile without interference. Anii convinces Janu to accompany her for ice cream elsewhere to give Nirima and Tuli space.</p><p>Once Janu and Anii leave, Tuli approaches Nirima. The two girls engage in a long-overdue, honest conversation to address their strained friendship. They acknowledge their mutual desire to move past their recent distance and behavior—including Nirima’s avoidance and Tuli’s emotional breakdown during a game. As they talk, Tuli offers Nirima a drink and they candidly discuss their insecurities, the rumors surrounding Nirima’s personality, and their true feelings about their social circle. The encounter concludes on a positive, reconciliatory note; they agree to study together, leaving their past friction behind and walking back to the common room as friends, effectively averting a permanent fallout.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

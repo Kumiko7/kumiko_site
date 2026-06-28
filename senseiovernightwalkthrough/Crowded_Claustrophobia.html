@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu is in his office when Kio arrives, humorously brandishing a &quot;verbal warrant&quot; to search his space and making suggestive jokes about BDSM. Their conversation shifts to the upcoming school trip to Okinawa. Kio reveals she is terrified of traveling in a crowded plane with her classmates, and Janu agrees to fly with her the following day instead of Thursday. Kio promises to find a way to make it up to him, hinting at sexual favors.</p><p>Shortly after Kio leaves, Tuli visits Janu for the same reason—she suffers from a fear of enclosed spaces and large crowds. Janu informs her he is already flying with Kio, and Tuli asks to join them. Janu agrees, on the condition that she model her new bikini for him on the trip.</p><p>As Janu and Tuli prepare to leave the school, they witness an argument between Juna and Oki. Juna is pleading with Oki for help with an undisclosed issue related to &quot;parallel world&quot; travel, but Oki firmly refuses, urging Juna to stop testing the world’s rules. After Oki storms off, Juna confides in Janu that she is considering disappearing to save others the trouble of her presence. Janu reassures her of her importance, and the group prepares for the next phase of their journey.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

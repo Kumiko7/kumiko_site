@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -63,4 +69,9 @@
             <div class="step"><b>Menu:</b> [No, we haven’t]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
 <div class="step"><b>Menu:</b> [Yes, No]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span> <span style='color:#777;'><i>(x2)</i></span></div>
 <div class="step"><b>Menu:</b> [Yes]<br>&#8618; <b>Choose:</b> <span style='color:#4dd2ff;'>Any</span></div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>In this sequence, Janu engages in a surreal, introspective dialogue with a mysterious entity associated with a flowerpot. The entity probes Janu&#x27;s childhood memories, emphasizing how people often &quot;blind&quot; themselves to painful or forgotten past experiences by creating bouquets of roses to hide the truth. The entity highlights the importance of using &quot;gardener gloves&quot; to avoid the thorns of these painful memories and encourages Janu to stop avoiding reality, urging them to plant, nurture, and harvest their own metaphorical garden to eventually grow &quot;thornless&quot; and accessible memories. Following this encounter, the scene transitions to the classroom where Janu is confronted by Nirima, who sarcastically praises Janu for finally admitting they need help with tutoring the class for upcoming standardized tests. While Dayai notes Janu&#x27;s distracted behavior, Eruka expresses concern over Janu&#x27;s workload. The tension rises when Tora makes provocative comments about &quot;cock&quot; (in reference to male chickens), prompting Tuli to pull Janu into a private conversation. Tuli offers to assist Janu with tutoring duties to ensure no student is left behind. Janu accepts her help, feeling a sense of relief, while remaining curious about Tuli’s true motivations and her desire to distance herself from their past interaction in the storage shed.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

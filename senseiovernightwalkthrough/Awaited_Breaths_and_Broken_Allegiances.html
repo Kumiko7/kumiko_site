@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu is working in the staff room, reflecting on his stagnant routine, when Dayai arrives to visit him. Their conversation shifts from lighthearted banter about Janu&#x27;s head shape to a deeper discussion regarding Janu&#x27;s feelings of professional inadequacy and the monotony of his life. Dayai encourages him to take it easy and offers her support.</p><p>The atmosphere is interrupted by Anii, the student council president, who arrives in a panic. Anii and Janu have a brief, tense exchange regarding a previous awkward incident in the changing rooms, which Janu accidentally brings up. Once the tension subsides, Anii reveals the reason for her visit: she brings a large stack of paperwork that Janu must sign for the return of a new student named Sora. Anii is noticeably hostile toward Sora, viewing her as a political rival, and even threatens Janu with extra gym training for his perceived lack of loyalty to the student council.</p><p>After Anii leaves, Dayai and Janu discuss the upcoming arrival of Sora. Dayai suggests that Janu should tutor the returning student, as she will need to catch up before the standardized tests. The scene concludes with Janu finishing the mountain of paperwork while Dayai keeps him company with a drink, leaving Janu hopeful that the new student might provide the change of pace he has been seeking.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>

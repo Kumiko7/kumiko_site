@@ -34,6 +34,12 @@
         .back { display: inline-block; margin-top: 30px; padding: 10px 15px; background: #333; color: #fff; border-radius: 5px; font-weight: bold; text-decoration: none; }
         .back:hover { background: #555; text-decoration: none; color: #fff; }
         code { background: #000; padding: 3px 8px; border-radius: 4px; color: #ffaa00; font-family: Consolas, monospace; }
+        
+        .spoiler { background-color: #222; color: #222; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; transition: background-color 0.3s, color 0.3s; margin-top: 15px; margin-bottom: 20px; }
+        .spoiler.revealed { background-color: #1e1e1e; color: #e0e0e0; }
+        .spoiler * { color: inherit; }
+        .spoiler p { margin: 0 0 10px 0; }
+        .spoiler p:last-child { margin-bottom: 0; }
     </style>
             </head>
             <body>
@@ -61,4 +67,9 @@
                 
                 <h3 style="color: #a3a3a3; margin-bottom: 10px;">Walkthrough / Choices</h3>
             <div class="step"><b>Event Completes Automatically:</b> No choices required.</div>
-<a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
+
+                <h3 style="color: #a3a3a3; margin-top: 30px; margin-bottom: 10px;">Summary (Click to reveal)</h3>
+                <div class="spoiler" onclick="this.classList.toggle('revealed')">
+                    <p>Janu joins Eruka and Juna for breakfast, where they discuss the awkward social dynamics of their trip, including Dayai’s recent behavior and the tension between the nieces. The conversation shifts to their speculation about the loud, suspicious noises heard the previous night, which the group correctly infers was a sexual encounter.</p><p>As they eat, Kio approaches the table to pitch a series of &quot;Wet n’ Wild&quot; activities to Anii, the student council president. Despite Anii’s initial resistance to the overtly sexual nature of the games, Kio manages to secure approval for the first event: a &quot;Watermelon Body Poppin&#x27; Battle.&quot;</p><p>Nearby, Tora attempts to act as a self-help mentor to Dayai, urging her to stop sulking over Janu and Juna&#x27;s presence and to prioritize her own happiness. Tora eventually manages to lighten the mood with playful antics, while in another corner, Mori and Nirima engage in a strained dialogue about Janu. Nirima mocks Mori&#x27;s obvious obsession with their teacher, noting that her constant negative commentary suggests a deeper, unspoken desire to interact with him. The event concludes with the group preparing for the upcoming watermelon challenge.</p>
+                </div>
+                <a class="back" href="javascript:history.back()">&larr; Go Back</a></body></html>
