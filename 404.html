@@ -4,10 +4,9 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    (function() {
+    document.addEventListener("DOMContentLoaded", function() {
       var currentPath = window.location.pathname;
       
-      // List your old directories and their new base URLs
       var targets = [
         { 
           oldDir: "/kumiko_site/lessonsinlovewalkthrough", 
@@ -22,11 +21,9 @@
       for (var i = 0; i < targets.length; i++) {
         var t = targets[i];
         
-        // Match exact directory match OR any nested pages inside it
         if (currentPath === t.oldDir || currentPath.indexOf(t.oldDir + "/") === 0) {
           var remainder = currentPath.substring(t.oldDir.length);
           
-          // Clean up leading slashes so the URL stitches together perfectly
           if (remainder.indexOf("/") === 0) {
             remainder = remainder.substring(1);
           }
@@ -36,13 +33,20 @@
           return; 
         }
       }
-    })();
+
+      // FALLBACK: If no rules matched, update the page UI to reflect a standard 404
+      document.title = "Page Not Found";
+      var messageElement = document.getElementById("message");
+      if (messageElement) {
+        messageElement.innerHTML = 'Please head back to the <a href="https://kumiko7.github.io/">main site</a>.';
+      }
+    });
   </script>
 </head>
 <body>
   <div style="font-family: sans-serif; text-align: center; padding-top: 50px;">
     <h2>Page Not Found</h2>
-    <p>If you aren't redirected in a few seconds, please head back to the <a href="https://kumiko7.github.io/kumiko_site/">main site</a>.</p>
+    <p id="message">Attempting to redirect you...</p>
   </div>
 </body>
 </html>
